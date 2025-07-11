@@ -1,8 +1,16 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Leaf, TreePine, Droplets, GraduationCap, Sun, ArrowRight } from "lucide-react"
-import Link from "next/link"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+import { Leaf, TreePine, Droplets, Sun, GraduationCap, ArrowRight, Users, Target, Globe } from "lucide-react"
 
 export default function ProgramsPage() {
   return (
@@ -35,19 +43,34 @@ export default function ProgramsPage() {
         </div>
       </header>
 
+      {/* Breadcrumb */}
+      <div className="container px-4 md:px-6 py-4">
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/">Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>Programs</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+      </div>
+
       {/* Hero Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-green-50 to-emerald-100">
+      <section className="py-16 bg-gradient-to-br from-green-50 to-emerald-100">
         <div className="container px-4 md:px-6">
-          <div className="text-center space-y-8">
+          <div className="text-center space-y-6">
             <Badge variant="secondary" className="bg-green-100 text-green-800 hover:bg-green-200">
-              Our Programs
+              Environmental Programs
             </Badge>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-gray-900">
-              Creating <span className="text-green-600">Lasting Change</span> Together
+              Our Climate Action Programs
             </h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Discover our comprehensive programs designed to address climate change through innovative solutions,
-              community engagement, and sustainable practices that protect our planet for future generations.
+              Comprehensive initiatives addressing the most critical environmental challenges through innovative
+              solutions, community engagement, and sustainable practices.
             </p>
           </div>
         </div>
@@ -57,73 +80,116 @@ export default function ProgramsPage() {
       <section className="py-20 bg-white">
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <TreePine className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <CardTitle className="text-gray-900">Reforestation</CardTitle>
-                <CardDescription>
-                  Restoring forests and planting native trees to combat deforestation and enhance carbon sequestration.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Link href="/programs/reforestation">
-                  <Button className="w-full bg-green-600 hover:bg-green-700">
+            <Link href="/programs/reforestation">
+              <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer group h-full">
+                <CardHeader className="text-center">
+                  <TreePine className="h-16 w-16 text-green-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <CardTitle className="text-xl">Reforestation Initiative</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <CardDescription>
+                    Restoring degraded forests and planting native trees to combat deforestation, enhance carbon
+                    sequestration, and protect biodiversity.
+                  </CardDescription>
+                  <div className="space-y-2">
+                    <div className="flex items-center text-sm text-gray-600">
+                      <Target className="h-4 w-4 mr-2 text-green-600" />
+                      50,000+ trees planted
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600">
+                      <Globe className="h-4 w-4 mr-2 text-green-600" />
+                      15 countries active
+                    </div>
+                  </div>
+                  <Button variant="outline" className="w-full group-hover:bg-green-50 bg-transparent">
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                </Link>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Droplets className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <CardTitle className="text-gray-900">Clean Water</CardTitle>
-                <CardDescription>
-                  Providing sustainable water solutions and protecting water resources in vulnerable communities.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Link href="/programs/clean-water">
-                  <Button className="w-full bg-green-600 hover:bg-green-700">
+            <Link href="/programs/clean-water">
+              <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer group h-full">
+                <CardHeader className="text-center">
+                  <Droplets className="h-16 w-16 text-blue-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <CardTitle className="text-xl">Clean Water Access</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <CardDescription>
+                    Providing sustainable water solutions and protecting water resources in vulnerable communities
+                    worldwide through innovative technology.
+                  </CardDescription>
+                  <div className="space-y-2">
+                    <div className="flex items-center text-sm text-gray-600">
+                      <Target className="h-4 w-4 mr-2 text-blue-600" />
+                      25,000+ people served
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600">
+                      <Globe className="h-4 w-4 mr-2 text-blue-600" />
+                      12 countries active
+                    </div>
+                  </div>
+                  <Button variant="outline" className="w-full group-hover:bg-blue-50 bg-transparent">
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                </Link>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <GraduationCap className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <CardTitle className="text-gray-900">Climate Education</CardTitle>
-                <CardDescription>
-                  Educating communities about climate change impacts and empowering sustainable living practices.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Link href="/programs/climate-education">
-                  <Button className="w-full bg-green-600 hover:bg-green-700">
+            <Link href="/programs/renewable-energy">
+              <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer group h-full">
+                <CardHeader className="text-center">
+                  <Sun className="h-16 w-16 text-yellow-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <CardTitle className="text-xl">Renewable Energy</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <CardDescription>
+                    Promoting solar, wind, and other renewable energy solutions to reduce carbon emissions and create
+                    sustainable energy systems.
+                  </CardDescription>
+                  <div className="space-y-2">
+                    <div className="flex items-center text-sm text-gray-600">
+                      <Target className="h-4 w-4 mr-2 text-yellow-600" />
+                      500MW+ capacity installed
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600">
+                      <Globe className="h-4 w-4 mr-2 text-yellow-600" />8 countries active
+                    </div>
+                  </div>
+                  <Button variant="outline" className="w-full group-hover:bg-yellow-50 bg-transparent">
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                </Link>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Sun className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <CardTitle className="text-gray-900">Renewable Energy</CardTitle>
-                <CardDescription>
-                  Advancing clean energy solutions and supporting communities in transitioning to sustainable power.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Link href="/programs/renewable-energy">
-                  <Button className="w-full bg-green-600 hover:bg-green-700">
+            <Link href="/programs/climate-education">
+              <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer group h-full">
+                <CardHeader className="text-center">
+                  <GraduationCap className="h-16 w-16 text-purple-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <CardTitle className="text-xl">Climate Education</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <CardDescription>
+                    Educating communities about climate change impacts and empowering them with knowledge and tools for
+                    sustainable living practices.
+                  </CardDescription>
+                  <div className="space-y-2">
+                    <div className="flex items-center text-sm text-gray-600">
+                      <Target className="h-4 w-4 mr-2 text-purple-600" />
+                      100,000+ people educated
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600">
+                      <Globe className="h-4 w-4 mr-2 text-purple-600" />
+                      20 countries active
+                    </div>
+                  </div>
+                  <Button variant="outline" className="w-full group-hover:bg-purple-50 bg-transparent">
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                </Link>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>
@@ -132,55 +198,52 @@ export default function ProgramsPage() {
       <section className="py-20 bg-gray-50">
         <div className="container px-4 md:px-6">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-gray-900">Our Collective Impact</h2>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-gray-900">Combined Program Impact</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Together, our programs have created meaningful change across communities worldwide.
+              Our integrated approach to environmental action has created measurable positive change across the globe.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="text-center space-y-2">
-              <div className="text-4xl font-bold text-green-600">50K+</div>
-              <div className="text-sm text-gray-600">Trees Planted</div>
+              <div className="text-4xl font-bold text-green-600">2.5M</div>
+              <div className="text-sm text-gray-600">Tons CO₂ Reduced</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-4xl font-bold text-green-600">25K</div>
-              <div className="text-sm text-gray-600">People with Clean Water</div>
+              <div className="text-4xl font-bold text-green-600">175K+</div>
+              <div className="text-sm text-gray-600">People Directly Impacted</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-4xl font-bold text-green-600">100K+</div>
-              <div className="text-sm text-gray-600">Students Educated</div>
+              <div className="text-4xl font-bold text-green-600">35</div>
+              <div className="text-sm text-gray-600">Countries Reached</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-4xl font-bold text-green-600">500</div>
-              <div className="text-sm text-gray-600">Solar Installations</div>
+              <div className="text-4xl font-bold text-green-600">150+</div>
+              <div className="text-sm text-gray-600">Projects Completed</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-green-600">
-        <div className="container px-4 md:px-6">
-          <div className="text-center space-y-8">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white">Ready to Make a Difference?</h2>
-            <p className="text-lg text-green-100 max-w-3xl mx-auto">
-              Join us in our mission to create a sustainable future. Every action counts, and together we can build a
-              better world.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/#get-involved">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-green-600 bg-transparent"
-                >
-                  Get Involved
-                </Button>
-              </Link>
-              <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
-                Support Our Work
-              </Button>
-            </div>
+      <section className="py-20 bg-green-600 text-white">
+        <div className="container px-4 md:px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Join Our Mission</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+            Every program needs dedicated supporters. Choose how you want to make a difference in the fight against
+            climate change.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+              <Users className="mr-2 h-5 w-5" />
+              Become a Volunteer
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-green-600 bg-transparent"
+            >
+              Support Our Programs
+            </Button>
           </div>
         </div>
       </section>
@@ -190,10 +253,10 @@ export default function ProgramsPage() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 md:grid-cols-4">
             <div className="space-y-4">
-              <Link href="/" className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2">
                 <Leaf className="h-8 w-8 text-green-400" />
                 <span className="text-xl font-bold">Aaranya</span>
-              </Link>
+              </div>
               <p className="text-gray-400 text-sm">
                 Building a sustainable future through climate action and environmental conservation.
               </p>
@@ -212,13 +275,13 @@ export default function ProgramsPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/programs/climate-education" className="hover:text-green-400 transition-colors">
-                    Climate Education
+                  <Link href="/programs/renewable-energy" className="hover:text-green-400 transition-colors">
+                    Renewable Energy
                   </Link>
                 </li>
                 <li>
-                  <Link href="/programs/renewable-energy" className="hover:text-green-400 transition-colors">
-                    Renewable Energy
+                  <Link href="/programs/climate-education" className="hover:text-green-400 transition-colors">
+                    Climate Education
                   </Link>
                 </li>
               </ul>
@@ -227,18 +290,23 @@ export default function ProgramsPage() {
               <h3 className="font-semibold mb-4">Get Involved</h3>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <Link href="/#get-involved" className="hover:text-green-400 transition-colors">
-                    Donate
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#get-involved" className="hover:text-green-400 transition-colors">
+                  <Link href="#volunteer" className="hover:text-green-400 transition-colors">
                     Volunteer
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#contact" className="hover:text-green-400 transition-colors">
-                    Partner with Us
+                  <Link href="#donate" className="hover:text-green-400 transition-colors">
+                    Donate
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#partner" className="hover:text-green-400 transition-colors">
+                    Partner With Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#newsletter" className="hover:text-green-400 transition-colors">
+                    Newsletter
                   </Link>
                 </li>
               </ul>
@@ -257,7 +325,7 @@ export default function ProgramsPage() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; {new Date().getFullYear()} Aaranya. All rights reserved. | Privacy Policy | Terms of Service</p>
+            <p>&copy; {new Date().getFullYear()} Aaranya. All rights reserved.</p>
           </div>
         </div>
       </footer>
