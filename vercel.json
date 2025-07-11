@@ -16,9 +16,5 @@
     "app/**/*.{js,ts,jsx,tsx}": {
       "includeFiles": "**"
     }
-  },
-  "buildCommand": "npm run build",
-  "outputDirectory": ".next",
-  "framework": "nextjs",
-  "installCommand": "npm install"
+  }
 }
