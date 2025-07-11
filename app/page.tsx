@@ -28,7 +28,7 @@ export default function HomePage() {
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center space-x-2">
             <Leaf className="h-8 w-8 text-green-600" />
-            <span className="text-xl font-bold text-gray-900">EcoFuture</span>
+            <span className="text-xl font-bold text-gray-900">Aaranya</span>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
             <Link href="#about" className="text-sm font-medium hover:text-green-600 transition-colors">
@@ -37,7 +37,7 @@ export default function HomePage() {
             <Link href="#impact" className="text-sm font-medium hover:text-green-600 transition-colors">
               Impact
             </Link>
-            <Link href="#programs" className="text-sm font-medium hover:text-green-600 transition-colors">
+            <Link href="/programs" className="text-sm font-medium hover:text-green-600 transition-colors">
               Programs
             </Link>
             <Link href="#get-involved" className="text-sm font-medium hover:text-green-600 transition-colors">
@@ -116,7 +116,7 @@ export default function HomePage() {
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-gray-900">Our Mission</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              EcoFuture is dedicated to combating climate change through innovative solutions, community engagement, and
+              Aaranya is dedicated to combating climate change through innovative solutions, community engagement, and
               sustainable practices that protect our planet.
             </p>
           </div>
@@ -215,8 +215,10 @@ export default function HomePage() {
                 <Button
                   variant="outline"
                   className="w-full border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
+                  href="/programs/reforestation"
+                  asChild
                 >
-                  Learn More
+                  <Link href="/programs/reforestation">Learn More</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -239,8 +241,10 @@ export default function HomePage() {
                 <Button
                   variant="outline"
                   className="w-full border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
+                  href="/programs/clean-water"
+                  asChild
                 >
-                  Learn More
+                  <Link href="/programs/clean-water">Learn More</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -263,8 +267,10 @@ export default function HomePage() {
                 <Button
                   variant="outline"
                   className="w-full border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
+                  href="/programs/climate-education"
+                  asChild
                 >
-                  Learn More
+                  <Link href="/programs/climate-education">Learn More</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -345,7 +351,7 @@ export default function HomePage() {
               <CardHeader>
                 <Mail className="h-8 w-8 text-green-600 mx-auto mb-4" />
                 <CardTitle className="text-gray-900">Email</CardTitle>
-                <CardDescription>info@ecofuture.org</CardDescription>
+                <CardDescription>info@aaranya.org</CardDescription>
               </CardHeader>
             </Card>
             <Card className="text-center hover:shadow-lg transition-shadow">
@@ -377,7 +383,7 @@ export default function HomePage() {
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
                 <Leaf className="h-8 w-8 text-green-400" />
-                <span className="text-xl font-bold">EcoFuture</span>
+                <span className="text-xl font-bold">Aaranya</span>
               </div>
               <p className="text-gray-400 text-sm">
                 Building a sustainable future through climate action and environmental conservation.
@@ -401,17 +407,17 @@ export default function HomePage() {
               <h3 className="font-semibold mb-4">Programs</h3>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <Link href="#" className="hover:text-green-400 transition-colors">
+                  <Link href="/programs/reforestation" className="hover:text-green-400 transition-colors">
                     Reforestation
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-green-400 transition-colors">
+                  <Link href="/programs/clean-water" className="hover:text-green-400 transition-colors">
                     Clean Water
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-green-400 transition-colors">
+                  <Link href="/programs/climate-education" className="hover:text-green-400 transition-colors">
                     Climate Education
                   </Link>
                 </li>
@@ -474,7 +480,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; {new Date().getFullYear()} EcoFuture. All rights reserved. | Privacy Policy | Terms of Service</p>
+            <p>&copy; {new Date().getFullYear()} Aaranya. All rights reserved. | Privacy Policy | Terms of Service</p>
           </div>
         </div>
       </footer>
