@@ -11,10 +11,5 @@
       "src": "/(.*)",
       "dest": "/"
     }
-  ],
-  "functions": {
-    "app/**/*.{js,ts,jsx,tsx}": {
-      "includeFiles": "**"
-    }
-  }
+  ]
 }
