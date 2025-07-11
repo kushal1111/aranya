@@ -1,10 +1,33 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type React from "react"
+import type { Metadata } from "next"
+import "./globals.css"
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: "Aaranya - Building a Sustainable Future",
+  description:
+    "Join Aaranya in the fight against climate change through innovative solutions, community engagement, and sustainable practices that protect our planet.",
+  keywords:
+    "climate change, sustainability, environment, reforestation, clean water, renewable energy, climate education",
+  authors: [{ name: "Aaranya" }],
+  creator: "Aaranya",
+  publisher: "Aaranya",
+  openGraph: {
+    title: "Aaranya - Building a Sustainable Future",
+    description: "Join us in the fight against climate change through innovative environmental solutions.",
+    url: "https://aaranya.org",
+    siteName: "Aaranya",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aaranya - Building a Sustainable Future",
+    description: "Join us in the fight against climate change through innovative environmental solutions.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -14,7 +37,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#16a34a" />
+      </head>
+      <body className="antialiased">{children}</body>
     </html>
   )
 }

@@ -1,30 +1,122 @@
-# Next js climate website
+# Aaranya - Climate Action Website
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A modern, responsive website for Aaranya, a climate change NGO focused on building a sustainable future through environmental conservation and community engagement.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/kushal-adhikaris-projects-8de6a555/v0-next-js-climate-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/3JSFLBQNL3u)
+## Features
 
-## Overview
+- **Responsive Design**: Works seamlessly across all devices
+- **Modern UI**: Built with Next.js 15, TypeScript, and Tailwind CSS
+- **Program Pages**: Dedicated pages for Reforestation, Clean Water, Climate Education, and Renewable Energy
+- **Performance Optimized**: Fast loading and SEO-friendly
+- **Accessibility**: WCAG compliant design
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Programs
+
+### 🌳 Reforestation Initiative
+- Tree planting and forest restoration
+- Carbon sequestration projects
+- Community engagement
+
+### 💧 Clean Water Access
+- Well construction and water filtration
+- Sustainable water solutions
+- Community health improvement
+
+### 📚 Climate Education
+- School programs and community workshops
+- Online learning platforms
+- Awareness campaigns
+
+### ⚡ Renewable Energy
+- Solar and wind power installations
+- Energy storage solutions
+- Clean energy transition
+
+## Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Icons**: Lucide React
+- **Deployment**: Vercel
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18.0.0 or higher
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+\`\`\`bash
+git clone https://github.com/your-username/aaranya-website.git
+cd aaranya-website
+\`\`\`
+
+2. Install dependencies:
+\`\`\`bash
+npm install
+\`\`\`
+
+3. Run the development server:
+\`\`\`bash
+npm run dev
+\`\`\`
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Deployment
 
-Your project is live at:
+This project is optimized for deployment on Vercel:
 
-**[https://vercel.com/kushal-adhikaris-projects-8de6a555/v0-next-js-climate-website](https://vercel.com/kushal-adhikaris-projects-8de6a555/v0-next-js-climate-website)**
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy automatically with each push to main branch
 
-## Build your app
+### Environment Variables
 
-Continue building your app on:
+No environment variables are required for basic functionality.
 
-**[https://v0.dev/chat/projects/3JSFLBQNL3u](https://v0.dev/chat/projects/3JSFLBQNL3u)**
+## Project Structure
 
-## How It Works
+\`\`\`
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── programs/
+│       ├── page.tsx
+│       ├── reforestation/
+│       ├── clean-water/
+│       ├── climate-education/
+│       └── renewable-energy/
+├── components/
+│   └── ui/
+├── lib/
+├── public/
+└── ...config files
+\`\`\`
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+- Website: [aaranya.org](https://aaranya.org)
+- Email: info@aaranya.org
+- Phone: +1 (555) 123-4567
+
+---
+
+Built with ❤️ for a sustainable future.
