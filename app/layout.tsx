@@ -45,8 +45,12 @@ export default function RootLayout({
         <meta name="theme-color" content="#16a34a" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">{children} <SpeedInsights /></body>
-    </html>
+    </html> 
   )
 }
