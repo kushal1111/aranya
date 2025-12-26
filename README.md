@@ -78,7 +78,20 @@ This project is optimized for deployment on Vercel:
 
 ### Environment Variables
 
-No environment variables are required for basic functionality.
+This project uses a small set of environment variables for admin access and optional production storage. Add these in your host (Vercel Environment Variables, GitHub Secrets, etc.) and do not commit them to source.
+
+Required for admin management (set these in production):
+
+- `ADMIN_PASSWORD` — strong password used to authenticate to `/admin/login`.
+- `ADMIN_SECRET` — random secret used to sign the admin session cookie.
+
+Optional (recommended) — external storage (S3) for production file uploads:
+
+- `AWS_REGION` — region for your S3 bucket (ex: us-east-1)
+- `S3_BUCKET` — name of the S3 bucket used for document storage
+- `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` — credentials for an IAM user with PutObject/GetObject on the bucket
+
+Tip: add these variables using your host's secrets UI (Vercel Dashboard, GitHub Secrets). See `.env.example` for a template.
 
 ## Project Structure
 
@@ -120,3 +133,16 @@ This project is licensed under the MIT License.
 ---
 
 Built with ❤️ for a sustainable future.
+
+Running end-to-end tests
+------------------------
+
+I added Playwright-based end-to-end tests that verify the admin auth & middleware redirects.
+
+- Install dev deps: `pnpm install --save-dev @playwright/test`
+- Install browsers: `npx playwright install`
+- Set env var `ADMIN_PASSWORD` before running the auth test (the test will be skipped if it's not set):
+
+  ADMIN_PASSWORD=yourpassword pnpm test:e2e
+
+There is also a GitHub Action at `.github/workflows/e2e.yml` that runs tests on push to `main` (set `ADMIN_PASSWORD` in your repository secrets to enable the auth test in CI`).

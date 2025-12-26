@@ -1,15 +1,17 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Documents from "@/components/ui/documents"
+import Hero from "@/components/ui/hero"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { Leaf, Droplets, Sun, GraduationCap, Users, Heart, ArrowRight, TreePine, Globe, Lightbulb } from "lucide-react"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+    <div id="main-content" role="main" className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
+      <nav aria-label="Primary navigation" className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
@@ -42,58 +44,34 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <Badge variant="secondary" className="mb-4 bg-green-100 text-green-800">
-            Climate Action Now
-          </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Building a Sustainable Future</h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Join us in the fight against climate change. Together, we can create lasting environmental solutions and
-            build a healthier planet for future generations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white">
-              <Heart className="mr-2 h-5 w-5" />
-              Support Our Mission
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
-            >
-              Learn More
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* Impact Stats */}
-      <section className="py-16 bg-white">
+      <section role="region" aria-labelledby="impact-heading" className="py-16 bg-white">
+        <h2 id="impact-heading" className="sr-only">Impact statistics</h2>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-green-600">50K+</div>
-              <div className="text-gray-600">Trees Planted</div>
+            <div className="space-y-2" role="article" aria-labelledby="impact-trees" aria-describedby="impact-trees-desc">
+              <div id="impact-trees" className="text-4xl font-bold text-green-600">50K+</div>
+              <div id="impact-trees-desc" className="text-gray-600">Trees Planted</div>
             </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-green-600">25</div>
-              <div className="text-gray-600">Countries</div>
+            <div className="space-y-2" role="article" aria-labelledby="impact-countries" aria-describedby="impact-countries-desc">
+              <div id="impact-countries" className="text-4xl font-bold text-green-600">25</div>
+              <div id="impact-countries-desc" className="text-gray-600">Countries</div>
             </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-green-600">100K+</div>
-              <div className="text-gray-600">Lives Impacted</div>
+            <div className="space-y-2" role="article" aria-labelledby="impact-lives" aria-describedby="impact-lives-desc">
+              <div id="impact-lives" className="text-4xl font-bold text-green-600">100K+</div>
+              <div id="impact-lives-desc" className="text-gray-600">Lives Impacted</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Mission Section */}
-      <section id="about" className="py-20 bg-gray-50">
+      <section id="about" role="region" aria-labelledby="about-heading" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Mission</h2>
+            <h2 id="about-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Mission</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Aaranya is dedicated to combating climate change through innovative solutions, community engagement, and
               sustainable practices that protect our planet.
@@ -101,13 +79,13 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card role="article" aria-labelledby="env-title" aria-describedby="env-desc" className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Globe className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <CardTitle>Environmental Protection</CardTitle>
+                <CardTitle id="env-title">Environmental Protection</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
+                <CardDescription id="env-desc">
                   Preserving ecosystems and biodiversity through conservation efforts and sustainable practices.
                 </CardDescription>
               </CardContent>
@@ -141,10 +119,10 @@ export default function HomePage() {
       </section>
 
       {/* Programs Section */}
-      <section className="py-20 bg-white">
+      <section role="region" aria-labelledby="programs-heading" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Programs</h2>
+            <h2 id="programs-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Programs</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive initiatives addressing the most critical environmental challenges of our time.
             </p>
@@ -152,13 +130,13 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link href="/programs/reforestation">
-              <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
+              <Card role="article" aria-labelledby="prog-ref-title" aria-describedby="prog-ref-desc" className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
                 <CardHeader className="text-center">
                   <TreePine className="h-12 w-12 text-green-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <CardTitle className="text-lg">Reforestation</CardTitle>
+                  <CardTitle id="prog-ref-title" className="text-lg">Reforestation</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-center">
+                  <CardDescription id="prog-ref-desc" className="text-center">
                     Restoring forests and planting trees to combat deforestation and carbon emissions.
                   </CardDescription>
                 </CardContent>
@@ -166,13 +144,13 @@ export default function HomePage() {
             </Link>
 
             <Link href="/programs/clean-water">
-              <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
+              <Card role="article" aria-labelledby="prog-water-title" aria-describedby="prog-water-desc" className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
                 <CardHeader className="text-center">
                   <Droplets className="h-12 w-12 text-blue-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <CardTitle className="text-lg">Clean Water</CardTitle>
+                  <CardTitle id="prog-water-title" className="text-lg">Clean Water</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-center">
+                  <CardDescription id="prog-water-desc" className="text-center">
                     Providing access to clean water and protecting water resources worldwide.
                   </CardDescription>
                 </CardContent>
@@ -180,13 +158,13 @@ export default function HomePage() {
             </Link>
 
             <Link href="/programs/renewable-energy">
-              <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
+              <Card role="article" aria-labelledby="prog-energy-title" aria-describedby="prog-energy-desc" className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
                 <CardHeader className="text-center">
                   <Sun className="h-12 w-12 text-yellow-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <CardTitle className="text-lg">Renewable Energy</CardTitle>
+                  <CardTitle id="prog-energy-title" className="text-lg">Renewable Energy</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-center">
+                  <CardDescription id="prog-energy-desc" className="text-center">
                     Promoting solar, wind, and other renewable energy solutions.
                   </CardDescription>
                 </CardContent>
@@ -194,13 +172,13 @@ export default function HomePage() {
             </Link>
 
             <Link href="/programs/climate-education">
-              <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
+              <Card role="article" aria-labelledby="prog-edu-title" aria-describedby="prog-edu-desc" className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
                 <CardHeader className="text-center">
                   <GraduationCap className="h-12 w-12 text-purple-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <CardTitle className="text-lg">Climate Education</CardTitle>
+                  <CardTitle id="prog-edu-title" className="text-lg">Climate Education</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-center">
+                  <CardDescription id="prog-edu-desc" className="text-center">
                     Educating communities about climate change and sustainable practices.
                   </CardDescription>
                 </CardContent>
@@ -224,30 +202,32 @@ export default function HomePage() {
       </section>
 
       {/* Get Involved Section */}
-      <section id="get-involved" className="py-20 bg-green-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get Involved Today</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-            Every action counts in the fight against climate change. Join our community of environmental advocates and
-            make a difference.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
-              Become a Volunteer
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-green-600 bg-transparent"
-            >
-              Make a Donation
-            </Button>
+      <section id="get-involved" className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 id="get-involved-heading" className="text-3xl md:text-4xl font-bold mb-4">Get Involved Today</h2> 
+            <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-95">
+              Every action counts. Join us—volunteer, donate, partner, or access official documents to learn more about our organization.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <a href="#volunteer" className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-white text-green-700 font-semibold hover:bg-gray-100">
+                Become a Volunteer
+              </a>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-600 bg-transparent">
+                Make a Donation
+              </Button>
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <Documents />
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer role="contentinfo" aria-labelledby="footer-heading" className="bg-gray-900 text-white py-12">
+        <h2 id="footer-heading" className="sr-only">Footer</h2>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
@@ -307,6 +287,11 @@ export default function HomePage() {
                 <li>
                   <Link href="#newsletter" className="hover:text-white transition-colors">
                     Newsletter
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#get-involved" className="hover:text-white transition-colors">
+                    Organization Documents
                   </Link>
                 </li>
                 <li>
