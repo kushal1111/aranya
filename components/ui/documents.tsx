@@ -10,7 +10,7 @@ const documents = [
   {
     title: "Company Registration",
     file: "/docs/company-registration.pdf",
-    description: "Certificate and incorporation documents",
+    description: "Company Registration Certificate and Incorporation document",
   },
   {
     title: "PAN Registration",
@@ -18,17 +18,12 @@ const documents = [
     description: "PAN registration document",
   },
   {
-    title: "Letter Generation",
-    file: "/docs/letter-generation.pdf",
-    description: "Official letter templates",
-  },
-  {
-    title: "Signed MoA",
+    title: "Memorandum of Association",
     file: "/docs/signed-moa.pdf",
     description: "Executed Memorandum of Association (MoA)",
   },
   {
-    title: "Signed AoA",
+    title: "Articles of Association",
     file: "/docs/signed-aoa.pdf",
     description: "Executed Articles of Association (AoA)",
   },
@@ -66,7 +61,6 @@ export default function Documents() {
 
   return (
     <div>
-      <h3 className="text-xl font-semibold text-white mb-6">Organization Documents</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {documents.map((doc, idx) => (
           <Card key={doc.file} role="article" aria-labelledby={`doc-title-${idx}`} aria-describedby={`doc-desc-${idx}`} className="bg-white text-gray-900">
@@ -87,10 +81,6 @@ export default function Documents() {
                   <a href={doc.file} target="_blank" rel="noopener noreferrer" aria-label={`Open ${doc.title} (opens in new tab)`} className="inline-flex items-center space-x-2 text-sm text-green-600 hover:underline">
                     <Download className="h-4 w-4" />
                     <span>Open</span>
-                  </a>
-
-                  <a href={doc.file} download aria-label={`Download ${doc.title}`} className="ml-2">
-                    <Button size="sm" aria-label={`Download ${doc.title}`}>Download</Button>
                   </a>
                 </div>
               </div>
