@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -10,6 +11,8 @@ type SiteHeaderProps = {
 }
 
 export default function SiteHeader({ active }: SiteHeaderProps) {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
   const navItems = [
     { label: "About", href: "/#about", key: "about" as const },
     { label: "Activities", href: "/activities", key: "activities" as const },
@@ -55,12 +58,43 @@ export default function SiteHeader({ active }: SiteHeaderProps) {
             >
               Donate Now
             </Button>
-            <button className="md:hidden p-2 rounded text-gray-600 hover:text-emerald-700" aria-label="Open menu">
+            <button
+              className="md:hidden p-2 rounded text-gray-600 hover:text-emerald-700"
+              aria-label="Open menu"
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-nav-menu"
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+              type="button"
+            >
               <Menu className="h-5 w-5" />
             </button>
           </div>
         </div>
       </div>
+      {isMobileMenuOpen && (
+        <div id="mobile-nav-menu" className="md:hidden border-t border-gray-200 bg-white px-4 py-3">
+          <div className="flex flex-col gap-2">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="px-2 py-2 text-sm font-semibold uppercase tracking-wide text-gray-700 hover:text-emerald-700"
+                style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: "0.07em" }}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Button
+              className="mt-2 w-full bg-amber-500 hover:bg-amber-400 text-gray-900 font-semibold rounded-sm px-5 py-2 text-sm uppercase tracking-wide shadow-none border-0"
+              style={{ fontFamily: "'Oswald', sans-serif" }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Donate Now
+            </Button>
+          </div>
+        </div>
+      )}
     </nav>
   )
 }
