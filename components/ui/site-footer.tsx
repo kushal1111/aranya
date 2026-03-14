@@ -33,7 +33,6 @@ export default function SiteFooter() {
               className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-5 flex items-center gap-2"
               style={{ fontFamily: "'Oswald', sans-serif" }}
             >
-              <Compass className="h-3.5 w-3.5" />
               Activities
             </h3>
             <ul className="space-y-3">
@@ -69,6 +68,7 @@ export default function SiteFooter() {
                 { href: "/volunteer", label: "Volunteer" },
                 { href: "/#donate", label: "Donate" },
                 { href: "/gallery", label: "Gallery" },
+                { href: "/partners", label: "Partners" },
                 { href: "/#get-involved", label: "Documents" },
               ].map((item) => (
                 <li key={item.label}>

@@ -202,7 +202,7 @@ export default function HomePage() {
               </h2>
               <div className="w-12 h-1 bg-amber-500 mb-6 rounded-full" />
               <p className="text-white/70 text-lg leading-relaxed">
-                Every action counts. Join us — volunteer, donate, or access official documents to learn more
+                Every action counts. Join us — volunteer, donate, or learn more
                 about our organization.
               </p>
             </div>
