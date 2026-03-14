@@ -2,11 +2,13 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import SiteFooter from "@/components/ui/site-footer"
+import SiteHeader from "@/components/ui/site-header"
 import { ArrowLeft, ArrowRight, Megaphone } from "lucide-react"
 
 export default function CampaignsPage() {
   return (
     <div className="min-h-screen bg-white">
+      <SiteHeader active="activities" />
       <section className="py-16 sm:py-20 bg-[#0d2b1e]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>
