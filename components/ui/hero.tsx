@@ -16,7 +16,7 @@ export default function Hero() {
           <div className="text-center lg:text-left">
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-emerald-800 mb-5 sm:mb-6">
-              Equitable Climate Solutions for Communities
+              Building Climate Resilient Communities
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-emerald-800/90 max-w-2xl mx-auto lg:mx-0 mb-8">

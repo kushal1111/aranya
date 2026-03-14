@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import SiteFooter from "@/components/ui/site-footer"
-import { ArrowLeft, ArrowRight, Megaphone, Users, Target } from "lucide-react"
+import { ArrowLeft, ArrowRight, Megaphone } from "lucide-react"
 
 export default function CampaignsPage() {
   return (
@@ -36,32 +36,25 @@ export default function CampaignsPage() {
       </section>
 
       <section className="py-16">
-        <div className="container px-4 md:px-6 mx-auto grid gap-6 md:grid-cols-3">
-          <Card>
+        <div className="container px-4 md:px-6 mx-auto max-w-3xl">
+          <Card className="text-center border-blue-100">
             <CardHeader>
-              <Megaphone className="h-8 w-8 text-blue-600 mb-2" />
-              <CardTitle>Public Awareness</CardTitle>
+              <Megaphone className="h-10 w-10 text-blue-600 mx-auto mb-2" />
+              <CardTitle>Campaigns Coming Soon</CardTitle>
             </CardHeader>
-            <CardContent className="text-sm text-gray-600">
-              City-wide and digital campaigns that promote climate-friendly choices.
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <Users className="h-8 w-8 text-blue-600 mb-2" />
-              <CardTitle>Volunteer Mobilization</CardTitle>
-            </CardHeader>
-            <CardContent className="text-sm text-gray-600">
-              Coordinated community action for cleanups, plantations, and outreach.
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <Target className="h-8 w-8 text-blue-600 mb-2" />
-              <CardTitle>Policy Advocacy</CardTitle>
-            </CardHeader>
-            <CardContent className="text-sm text-gray-600">
-              Issue-based campaigns supporting stronger environmental commitments.
+            <CardContent className="text-gray-600 space-y-3">
+              <p>
+                We are currently preparing our next set of public campaigns focused on climate awareness, rights, and
+                equitable transition.
+              </p>
+              <p>
+                Please stay connected for updates, participation opportunities, and campaign announcements.
+              </p>
+              <div className="pt-2">
+                <Link href="/volunteer" className="text-blue-700 font-medium hover:underline">
+                  Express interest in upcoming campaigns
+                </Link>
+              </div>
             </CardContent>
           </Card>
         </div>

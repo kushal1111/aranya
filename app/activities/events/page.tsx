@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import SiteFooter from "@/components/ui/site-footer"
-import { ArrowLeft, CalendarDays, MapPin, Users } from "lucide-react"
+import { ArrowLeft, CalendarDays } from "lucide-react"
 
 export default function EventsPage() {
   return (
@@ -30,32 +30,24 @@ export default function EventsPage() {
       </section>
 
       <section className="py-16">
-        <div className="container px-4 md:px-6 mx-auto grid gap-6 md:grid-cols-3">
-          <Card>
+        <div className="container px-4 md:px-6 mx-auto max-w-3xl">
+          <Card className="text-center border-purple-100">
             <CardHeader>
-              <CalendarDays className="h-8 w-8 text-purple-600 mb-2" />
-              <CardTitle>Workshops</CardTitle>
+              <CalendarDays className="h-10 w-10 text-purple-600 mx-auto mb-2" />
+              <CardTitle>Events Coming Soon</CardTitle>
             </CardHeader>
-            <CardContent className="text-sm text-gray-600">
-              Practical sessions on climate education, sustainable living, and local action planning.
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <MapPin className="h-8 w-8 text-purple-600 mb-2" />
-              <CardTitle>Field Activities</CardTitle>
-            </CardHeader>
-            <CardContent className="text-sm text-gray-600">
-              Plantation drives, cleanup campaigns, and on-site environmental restoration events.
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <Users className="h-8 w-8 text-purple-600 mb-2" />
-              <CardTitle>Community Forums</CardTitle>
-            </CardHeader>
-            <CardContent className="text-sm text-gray-600">
-              Open discussions that bring citizens, institutions, and experts together.
+            <CardContent className="text-gray-600 space-y-3">
+              <p>
+                We are currently preparing our next round of workshops, consultations, and community events.
+              </p>
+              <p>
+                Please stay connected through our contact channels for announcements and participation opportunities.
+              </p>
+              <div className="pt-2">
+                <Link href="/volunteer" className="text-purple-700 font-medium hover:underline">
+                  Express interest in upcoming events
+                </Link>
+              </div>
             </CardContent>
           </Card>
         </div>

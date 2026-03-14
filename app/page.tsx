@@ -6,7 +6,7 @@ import Documents from "@/components/ui/documents"
 import Hero from "@/components/ui/hero"
 import SiteFooter from "@/components/ui/site-footer"
 import { Badge } from "@/components/ui/badge"
-import { Droplets, Sun, GraduationCap, Users, Heart, ArrowRight, TreePine, Globe, Lightbulb } from "lucide-react"
+import { FolderOpen, Megaphone, BookOpen, CalendarDays, Users, Heart, ArrowRight, Globe, Lightbulb } from "lucide-react"
 
 export default function HomePage() {
   return (
@@ -19,9 +19,9 @@ export default function HomePage() {
               <Image
                 src="/docs/logo.jpg"
                 alt="Aaranya logo"
-                width={180}
-                height={60}
-                className="h-12 w-auto"
+                width={250}
+                height={100}
+                className="h-14 w-auto"
                 priority
               />
             </div>
@@ -145,7 +145,7 @@ export default function HomePage() {
             <Link href="/activities/projects">
               <Card role="article" aria-labelledby="prog-ref-title" aria-describedby="prog-ref-desc" className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
                 <CardHeader className="text-center">
-                  <TreePine className="h-12 w-12 text-green-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <FolderOpen className="h-12 w-12 text-green-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
                   <CardTitle id="prog-ref-title" className="text-lg">Projects</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -159,7 +159,7 @@ export default function HomePage() {
             <Link href="/activities/campaigns">
               <Card role="article" aria-labelledby="prog-water-title" aria-describedby="prog-water-desc" className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
                 <CardHeader className="text-center">
-                  <Droplets className="h-12 w-12 text-blue-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <Megaphone className="h-12 w-12 text-blue-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
                   <CardTitle id="prog-water-title" className="text-lg">Campaigns</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -173,7 +173,7 @@ export default function HomePage() {
             <Link href="/activities/publications">
               <Card role="article" aria-labelledby="prog-energy-title" aria-describedby="prog-energy-desc" className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
                 <CardHeader className="text-center">
-                  <Sun className="h-12 w-12 text-yellow-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <BookOpen className="h-12 w-12 text-yellow-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
                   <CardTitle id="prog-energy-title" className="text-lg">Publications</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -187,7 +187,7 @@ export default function HomePage() {
             <Link href="/activities/events">
               <Card role="article" aria-labelledby="prog-edu-title" aria-describedby="prog-edu-desc" className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
                 <CardHeader className="text-center">
-                  <GraduationCap className="h-12 w-12 text-purple-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <CalendarDays className="h-12 w-12 text-purple-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
                   <CardTitle id="prog-edu-title" className="text-lg">Events</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -220,7 +220,7 @@ export default function HomePage() {
           <div className="text-center">
             <h2 id="get-involved-heading" className="text-3xl md:text-4xl font-bold mb-4">Get Involved Today</h2> 
             <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-95">
-              Every action counts. Join us—volunteer, donate, partner, or access official documents to learn more about our organization.
+              Every action counts. Join us—volunteer, donate, or access official documents to learn more about our organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link href="/volunteer" className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-white text-green-700 font-semibold hover:bg-gray-100">

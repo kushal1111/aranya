@@ -1,37 +1,36 @@
 import Link from "next/link"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import SiteFooter from "@/components/ui/site-footer"
-import { ArrowRight, TreePine, Droplets, Sun, GraduationCap } from "lucide-react"
+import { ArrowRight, FolderOpen, Megaphone, BookOpen, CalendarDays } from "lucide-react"
 
 const activities = [
   {
     title: "Projects",
     href: "/activities/projects",
     description: "Long-term initiatives designed for measurable environmental impact.",
-    icon: TreePine,
+    icon: FolderOpen,
     color: "text-green-600",
   },
   {
     title: "Campaigns",
     href: "/activities/campaigns",
     description: "Community and public mobilization for climate awareness and action.",
-    icon: Droplets,
+    icon: Megaphone,
     color: "text-blue-600",
   },
   {
     title: "Publications",
     href: "/activities/publications",
     description: "Reports, insights, and practical resources to spread knowledge.",
-    icon: Sun,
+    icon: BookOpen,
     color: "text-yellow-600",
   },
   {
     title: "Events",
     href: "/activities/events",
     description: "Workshops, forums, and field activities connecting people and ideas.",
-    icon: GraduationCap,
+    icon: CalendarDays,
     color: "text-purple-600",
   },
 ]
@@ -41,10 +40,9 @@ export default function ActivitiesPage() {
     <div className="min-h-screen bg-white">
       <section className="py-16 bg-gradient-to-br from-green-50 to-emerald-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Badge variant="secondary" className="bg-green-100 text-green-800 hover:bg-green-200">
-            Aaranya
-          </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-4">Our Activities</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-4 inline-flex items-center gap-3">
+            Our Activities
+          </h1>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             Discover how we create environmental impact through projects, campaigns, publications, and events.
           </p>

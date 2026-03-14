@@ -1,10 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Separator } from "@/components/ui/separator"
+import { Compass, FolderOpen, Megaphone, BookOpen, CalendarDays } from "lucide-react"
 
 export default function SiteFooter() {
   return (
-    <footer role="contentinfo" aria-labelledby="footer-heading" className="bg-gray-900 text-white py-12">
+    <footer id="contact" role="contentinfo" aria-labelledby="footer-heading" className="bg-gray-900 text-white py-12">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -12,7 +13,9 @@ export default function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Image src="/docs/logo.jpg" alt="Aaranya logo" width={160} height={54} className="h-10 w-auto" />
+              <Link href="/" aria-label="Go to homepage">
+                <Image src="/docs/logo.jpg" alt="Aaranya logo" width={160} height={54} className="h-10 w-auto" />
+              </Link>
             </div>
             <p className="text-gray-400">
               ARANYA is a non-profit dedicated to advancing equitable climate solutions through carbon-negative
@@ -21,25 +24,32 @@ export default function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Activities</h3>
+            <h3 className="text-lg font-semibold mb-4 inline-flex items-center gap-2">
+              <Compass className="h-4 w-4 text-green-400" />
+              Activities
+            </h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <Link href="/activities/projects" className="hover:text-white transition-colors">
+                <Link href="/activities/projects" className="hover:text-white transition-colors inline-flex items-center gap-2">
+                  <FolderOpen className="h-4 w-4" />
                   Projects
                 </Link>
               </li>
               <li>
-                <Link href="/activities/campaigns" className="hover:text-white transition-colors">
+                <Link href="/activities/campaigns" className="hover:text-white transition-colors inline-flex items-center gap-2">
+                  <Megaphone className="h-4 w-4" />
                   Campaigns
                 </Link>
               </li>
               <li>
-                <Link href="/activities/publications" className="hover:text-white transition-colors">
+                <Link href="/activities/publications" className="hover:text-white transition-colors inline-flex items-center gap-2">
+                  <BookOpen className="h-4 w-4" />
                   Publications
                 </Link>
               </li>
               <li>
-                <Link href="/activities/events" className="hover:text-white transition-colors">
+                <Link href="/activities/events" className="hover:text-white transition-colors inline-flex items-center gap-2">
+                  <CalendarDays className="h-4 w-4" />
                   Events
                 </Link>
               </li>
@@ -57,11 +67,6 @@ export default function SiteFooter() {
               <li>
                 <Link href="/#donate" className="hover:text-white transition-colors">
                   Donate
-                </Link>
-              </li>
-              <li>
-                <Link href="/#partner" className="hover:text-white transition-colors">
-                  Partner With Us
                 </Link>
               </li>
               <li>
