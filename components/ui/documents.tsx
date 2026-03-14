@@ -16,17 +16,7 @@ const documents = [
     title: "PAN Registration",
     file: "/docs/pan-registration.pdf",
     description: "PAN registration document",
-  },
-  {
-    title: "Memorandum of Association",
-    file: "/docs/signed-moa.pdf",
-    description: "Executed Memorandum of Association (MoA)",
-  },
-  {
-    title: "Articles of Association",
-    file: "/docs/signed-aoa.pdf",
-    description: "Executed Articles of Association (AoA)",
-  },
+  }
 ]
 
 function formatBytes(bytes: number | null) {

@@ -1,13 +1,25 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Heart } from "lucide-react"
+import heroBackground from "@/app/images/hero/WhatsApp Image 2026-03-14 at 7.49.50 PM.jpeg"
 
 export default function Hero() {
   return (
     <section className="relative isolate overflow-hidden min-h-[88vh] flex items-center">
       {/* Dark forest-green layered background */}
       <div className="absolute inset-0 z-0 bg-[#0d2b1e]" />
+      <div className="absolute inset-y-0 right-0 z-0 w-full lg:w-1/2">
+        <Image
+          src={heroBackground}
+          alt="ARANYA fieldwork background"
+          fill
+          priority
+          className="object-cover opacity-[0.22]"
+          sizes="(max-width: 1024px) 100vw, 50vw"
+        />
+      </div>
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top_left,rgba(16,120,60,0.55),transparent_60%)]" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(6,60,30,0.7),transparent_60%)]" />
       {/* Subtle texture overlay */}
@@ -20,13 +32,7 @@ export default function Hero() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 w-full">
-        <div className="max-w-4xl">
-
-          {/* Label chip */}
-          <div className="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 inline-block" />
-            Non-Profit · Climate Action · Nepal
-          </div>
+        <div className="w-full lg:w-1/2">
 
           {/* Main headline */}
           <h1
