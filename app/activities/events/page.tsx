@@ -1,26 +1,29 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import SiteFooter from "@/components/ui/site-footer"
 import { ArrowLeft, CalendarDays } from "lucide-react"
 
 export default function EventsPage() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="py-16 bg-gradient-to-br from-purple-50 to-fuchsia-100">
-        <div className="container px-4 md:px-6 mx-auto">
-          <Badge variant="secondary" className="mb-4 bg-purple-100 text-purple-800 hover:bg-purple-200">
+      <section className="py-16 sm:py-20 bg-[#0d2b1e]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>
             Activities
-          </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Events</h1>
-          <p className="text-lg text-gray-700 max-w-3xl">
+          </p>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 inline-flex items-center gap-3" style={{ fontFamily: "'Oswald', sans-serif" }}>
+            <CalendarDays className="h-9 w-9 text-amber-400" />
+            Events
+          </h1>
+          <div className="w-12 h-1 bg-amber-500 mb-6 rounded-full" />
+          <p className="text-lg text-white/75 max-w-3xl">
             Our events connect experts, volunteers, and communities through workshops, field activities, and public
             conversations on environmental action.
           </p>
           <div className="mt-8">
             <Link href="/activities/publications">
-              <Button variant="outline" className="bg-transparent">
+              <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 bg-transparent">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Publications
               </Button>
@@ -29,12 +32,12 @@ export default function EventsPage() {
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="container px-4 md:px-6 mx-auto max-w-3xl">
-          <Card className="text-center border-purple-100">
+      <section className="py-16 sm:py-20 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="text-center border border-gray-200 shadow-sm">
             <CardHeader>
-              <CalendarDays className="h-10 w-10 text-purple-600 mx-auto mb-2" />
-              <CardTitle>Events Coming Soon</CardTitle>
+              <CalendarDays className="h-10 w-10 text-emerald-700 mx-auto mb-2" />
+              <CardTitle className="text-3xl text-gray-900" style={{ fontFamily: "'Oswald', sans-serif" }}>Events Coming Soon</CardTitle>
             </CardHeader>
             <CardContent className="text-gray-600 space-y-3">
               <p>
@@ -44,7 +47,7 @@ export default function EventsPage() {
                 Please stay connected through our contact channels for announcements and participation opportunities.
               </p>
               <div className="pt-2">
-                <Link href="/volunteer" className="text-purple-700 font-medium hover:underline">
+                <Link href="/volunteer" className="text-emerald-700 font-semibold hover:text-emerald-900" style={{ fontFamily: "'Oswald', sans-serif" }}>
                   Express interest in upcoming events
                 </Link>
               </div>

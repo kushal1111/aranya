@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import SiteFooter from "@/components/ui/site-footer"
-import { Leaf, MapPin, Calendar, Images } from "lucide-react"
+import SiteHeader from "@/components/ui/site-header"
+import { MapPin, Calendar, Images } from "lucide-react"
 import bojheniPhoto1 from "@/app/images/WhatsApp Image 2026-03-14 at 2.21.34 PM.jpeg"
 const project = {
   title: "Just Energy Transition Consultation Workshop",
@@ -20,51 +21,29 @@ const project = {
 
 export default function GalleryPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <Leaf className="h-8 w-8 text-green-600" />
-              <span className="text-2xl font-bold text-gray-900">Aaranya</span>
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-green-600 transition-colors">
-                Home
-              </Link>
-              <Link href="/#about" className="text-gray-700 hover:text-green-600 transition-colors">
-                About
-              </Link>
-              <Link href="/activities" className="text-gray-700 hover:text-green-600 transition-colors">
-                Activities
-              </Link>
-              <Link href="/gallery" className="text-green-600 font-medium">
-                Gallery
-              </Link>
-              <Link href="/#contact" className="text-gray-700 hover:text-green-600 transition-colors">
-                Contact
-              </Link>
-            </div>
-            <Button className="bg-green-600 hover:bg-green-700 text-white">Donate Now</Button>
-          </div>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-white">
+      <SiteHeader active="gallery" />
 
       {/* Header Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Project Gallery</h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+      <section className="py-16 sm:py-20 bg-[#0d2b1e]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>
+            Visual Stories
+          </p>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>
+            Project Gallery
+          </h1>
+          <div className="w-12 h-1 bg-amber-500 mb-6 rounded-full" />
+          <p className="text-lg text-white/75 max-w-3xl">
             Explore highlights from ARANYA's Just Energy Transition field work in Bojheni.
           </p>
         </div>
       </section>
 
       {/* Projects Grid */}
-      <section className="pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <Card className="max-w-4xl mx-auto overflow-hidden hover:shadow-xl transition-all duration-300 group">
+          <Card className="max-w-4xl mx-auto overflow-hidden border border-gray-200 hover:border-emerald-400 hover:shadow-md transition-all duration-200 group">
             <div className="relative">
               <Image
                 src={project.image}
@@ -78,8 +57,10 @@ export default function GalleryPage() {
               </div>
             </div>
 
-            <CardHeader>
-              <CardTitle className="text-xl md:text-2xl">{project.title}</CardTitle>
+            <CardHeader className="pb-3">
+              <CardTitle className="text-2xl md:text-3xl text-gray-900" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                {project.title}
+              </CardTitle>
               <div className="flex items-center text-sm text-gray-500 space-x-4">
                 <div className="flex items-center">
                   <MapPin className="h-4 w-4 mr-1" />
@@ -93,12 +74,12 @@ export default function GalleryPage() {
               <CardDescription className="text-gray-600">{project.description}</CardDescription>
             </CardHeader>
 
-            <CardContent className="flex items-center justify-between">
+            <CardContent className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div className="inline-flex items-center text-sm text-gray-600">
-                <Images className="h-4 w-4 mr-2 text-green-600" />4 workshop photos
+                <Images className="h-4 w-4 mr-2 text-emerald-700" />4 workshop photos
               </div>
               <Link href={project.href}>
-                <Button size="sm" variant="outline" className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent">
+                <Button size="sm" variant="outline" className="border-emerald-700 text-emerald-700 hover:bg-emerald-50 bg-transparent">
                   View Photo Gallery
                 </Button>
               </Link>
@@ -108,21 +89,23 @@ export default function GalleryPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-green-600 text-white">
+      <section className="py-16 bg-[#0d2b1e] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Join Our Next Project</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>
+            Join Our Next Project
+          </h2>
+          <p className="text-lg mb-8 max-w-3xl mx-auto text-white/75">
             Be part of our mission to create positive environmental change. Every project starts with passionate
             individuals who want to make a difference.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+            <Button size="lg" className="bg-amber-500 hover:bg-amber-400 text-gray-900">
               Volunteer With Us
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-green-600 bg-transparent"
+              className="border-white/25 text-white hover:bg-white hover:text-gray-900 bg-transparent"
             >
               Support Our Work
             </Button>

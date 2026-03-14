@@ -1,238 +1,230 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Documents from "@/components/ui/documents"
 import Hero from "@/components/ui/hero"
 import SiteFooter from "@/components/ui/site-footer"
-import { Badge } from "@/components/ui/badge"
-import { FolderOpen, Megaphone, BookOpen, CalendarDays, Users, Heart, ArrowRight, Globe, Lightbulb } from "lucide-react"
+import SiteHeader from "@/components/ui/site-header"
+import { FolderOpen, Megaphone, BookOpen, CalendarDays, ArrowRight, Globe, Users, Lightbulb } from "lucide-react"
 
 export default function HomePage() {
   return (
-    <div id="main-content" role="main" className="min-h-screen bg-gradient-to-b from-green-50 to-white">
-      {/* Navigation */}
-      <nav aria-label="Primary navigation" className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <Image
-                src="/docs/logo.jpg"
-                alt="Aaranya logo"
-                width={250}
-                height={100}
-                className="h-14 w-auto"
-                priority
-              />
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="#about" className="text-gray-700 hover:text-green-600 transition-colors">
-                About
-              </Link>
-              <Link href="/activities" className="text-gray-700 hover:text-green-600 transition-colors">
-                Activities
-              </Link>
-              <Link href="/gallery" className="text-gray-700 hover:text-green-600 transition-colors">
-                Gallery
-              </Link>
-              <Link href="#get-involved" className="text-gray-700 hover:text-green-600 transition-colors">
-                Get Involved
-              </Link>
-              <Link href="#contact" className="text-gray-700 hover:text-green-600 transition-colors">
-                Contact
-              </Link>
-            </div>
-            <Button className="bg-green-600 hover:bg-green-700 text-white">Donate Now</Button>
-          </div>
-        </div>
-      </nav>
+    <div id="main-content" role="main" className="min-h-screen bg-white">
 
-      {/* Hero Section */}
+      <SiteHeader active="home" />
+
+      {/* ── Hero ── */}
       <Hero />
 
-      {/* Mission Section */}
-      <section id="about" role="region" aria-labelledby="about-heading" className="py-20 bg-gray-50">
+      {/* ── About / Mission ── */}
+      <section id="about" role="region" aria-labelledby="about-heading" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
-            <h2 id="about-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
-              About ARANYA
-            </h2>
-            <div className="max-w-5xl mx-auto space-y-4 text-base md:text-lg text-gray-700 leading-relaxed">
+
+          {/* Section label */}
+          <p className="text-xs font-bold uppercase tracking-widest text-amber-500 mb-3">Who We Are</p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+            <div>
+              <h2
+                id="about-heading"
+                className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight"
+                style={{ fontFamily: "'Oswald', sans-serif" }}
+              >
+                About ARANYA
+              </h2>
+              <div className="w-12 h-1 bg-amber-500 mb-6 rounded-full" />
+            </div>
+            <div className="space-y-4 text-base md:text-lg text-gray-600 leading-relaxed">
               <p>
-                The climate crisis is not a singular challenge; it is a complex intersection of environmental degradation and systemic inequality. 
-                Action for Resilient Adaptation and Nature-based Energy Alternatives (ARANYA) is a non-governmental,
-                not-for-profit organization dedicated to advancing sustainable and equitable climate solutions.
+                The climate crisis is not a singular challenge; it is a complex intersection of environmental
+                degradation and systemic inequality. <strong className="text-gray-800">Action for Resilient Adaptation
+                and Nature-based Energy Alternatives (ARANYA)</strong> is a non-governmental, not-for-profit
+                organization dedicated to advancing sustainable and equitable climate solutions.
               </p>
               <p>
-                Our work integrates mitigation, adaptation, and resilience, to tackle the intertwined challenges of
-                climate change through a holistic and interdisciplinary approach.
+                Our work integrates mitigation, adaptation, and resilience to tackle the intertwined challenges
+                of climate change through a holistic and interdisciplinary approach.
               </p>
-              <p className="font-semibold text-gray-900">Our work is anchored in three core thematic areas:</p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card
-              role="article"
-              aria-labelledby="cnn-title"
-              aria-describedby="cnn-desc"
-              className="text-center hover:shadow-lg transition-shadow"
-            >
-              <CardHeader>
-                <Globe className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <CardTitle id="cnn-title">Carbon Net Negative (CNN)</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription id="cnn-desc">
-                  Developing and promoting strategies that move beyond carbon neutrality towards emission removal
-                  through scientific and technological intervention that are community-driven and rooted in nature.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card
-              role="article"
-              aria-labelledby="jet-title"
-              aria-describedby="jet-desc"
-              className="text-center hover:shadow-lg transition-shadow"
-            >
-              <CardHeader>
-                <Users className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <CardTitle id="jet-title">Just Energy Transition (JET)</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription id="jet-desc">
-                  Supporting a fair and inclusive shift from fossil fuels to renewable energy systems, ensuring that
-                  women, Indigenous peoples, and marginalized communities are meaningfully included in decision-making
-                  and benefit equitably from the transition.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card
-              role="article"
-              aria-labelledby="crc-title"
-              aria-describedby="crc-desc"
-              className="text-center hover:shadow-lg transition-shadow"
-            >
-              <CardHeader>
-                <Lightbulb className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <CardTitle id="crc-title">Climate Resilient Communities (CRC)</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription id="crc-desc">
-                  Strengthening local capacities to tackle cross-cutting impacts of climate change by promoting
-                  resilience-building measures, knowledge sharing, and nature-based solutions tailored to diverse
-                  socio-ecological contexts.
-                </CardDescription>
-              </CardContent>
-            </Card>
+          {/* Three thematic areas */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                icon: Globe,
+                color: "text-emerald-600",
+                bg: "bg-emerald-50",
+                border: "border-l-emerald-500",
+                abbr: "CNN",
+                title: "Carbon Net Negative",
+                desc: "Developing and promoting strategies that move beyond carbon neutrality towards emission removal through scientific and technological intervention that are community-driven and rooted in nature.",
+              },
+              {
+                icon: Users,
+                color: "text-blue-600",
+                bg: "bg-blue-50",
+                border: "border-l-blue-500",
+                abbr: "JET",
+                title: "Just Energy Transition",
+                desc: "Supporting a fair and inclusive shift from fossil fuels to renewable energy systems, ensuring that women, Indigenous peoples, and marginalized communities are meaningfully included in decision-making.",
+              },
+              {
+                icon: Lightbulb,
+                color: "text-amber-600",
+                bg: "bg-amber-50",
+                border: "border-l-amber-500",
+                abbr: "CRC",
+                title: "Climate Resilient Communities",
+                desc: "Strengthening local capacities to tackle cross-cutting impacts of climate change by promoting resilience-building measures, knowledge sharing, and nature-based solutions.",
+              },
+            ].map((area) => (
+              <div
+                key={area.abbr}
+                className={`border-l-4 ${area.border} ${area.bg} p-6 rounded-r-lg hover:shadow-md transition-shadow duration-200`}
+              >
+                <area.icon className={`h-8 w-8 ${area.color} mb-4`} />
+                <div
+                  className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1"
+                  style={{ fontFamily: "'Oswald', sans-serif" }}
+                >
+                  {area.abbr}
+                </div>
+                <h3
+                  className="text-xl font-bold text-gray-900 mb-3"
+                  style={{ fontFamily: "'Oswald', sans-serif" }}
+                >
+                  {area.title}
+                </h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{area.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Activities Section */}
-      <section role="region" aria-labelledby="programs-heading" className="py-20 bg-white">
+      {/* ── Activities ── */}
+      <section role="region" aria-labelledby="activities-heading" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 id="programs-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Activities</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="mb-12">
+            <p className="text-xs font-bold uppercase tracking-widest text-amber-500 mb-3">What We Do</p>
+            <h2
+              id="activities-heading"
+              className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+              style={{ fontFamily: "'Oswald', sans-serif" }}
+            >
+              Our Activities
+            </h2>
+            <div className="w-12 h-1 bg-amber-500 mb-6 rounded-full" />
+            <p className="text-lg text-gray-600 max-w-2xl">
               Explore our key activity areas where we engage communities and drive climate action.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link href="/activities/projects">
-              <Card role="article" aria-labelledby="prog-ref-title" aria-describedby="prog-ref-desc" className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
-                <CardHeader className="text-center">
-                  <FolderOpen className="h-12 w-12 text-green-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <CardTitle id="prog-ref-title" className="text-lg">Projects</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription id="prog-ref-desc" className="text-center">
-                    Long-term, on-ground initiatives delivering measurable environmental impact.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link href="/activities/campaigns">
-              <Card role="article" aria-labelledby="prog-water-title" aria-describedby="prog-water-desc" className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
-                <CardHeader className="text-center">
-                  <Megaphone className="h-12 w-12 text-blue-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <CardTitle id="prog-water-title" className="text-lg">Campaigns</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription id="prog-water-desc" className="text-center">
-                    Awareness and mobilization drives that encourage immediate climate action.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link href="/activities/publications">
-              <Card role="article" aria-labelledby="prog-energy-title" aria-describedby="prog-energy-desc" className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
-                <CardHeader className="text-center">
-                  <BookOpen className="h-12 w-12 text-yellow-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <CardTitle id="prog-energy-title" className="text-lg">Publications</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription id="prog-energy-desc" className="text-center">
-                    Research, reports, and practical resources to inform and inspire action.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link href="/activities/events">
-              <Card role="article" aria-labelledby="prog-edu-title" aria-describedby="prog-edu-desc" className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
-                <CardHeader className="text-center">
-                  <CalendarDays className="h-12 w-12 text-purple-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <CardTitle id="prog-edu-title" className="text-lg">Events</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription id="prog-edu-desc" className="text-center">
-                    Workshops, forums, and field events that connect people and ideas.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </Link>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              {
+                href: "/activities/projects",
+                icon: FolderOpen,
+                iconColor: "text-emerald-600",
+                iconBg: "bg-emerald-100",
+                label: "Projects",
+                desc: "Long-term, on-ground initiatives delivering measurable environmental impact.",
+              },
+              {
+                href: "/activities/campaigns",
+                icon: Megaphone,
+                iconColor: "text-blue-600",
+                iconBg: "bg-blue-100",
+                label: "Campaigns",
+                desc: "Awareness and mobilization drives that encourage immediate climate action.",
+              },
+              {
+                href: "/activities/publications",
+                icon: BookOpen,
+                iconColor: "text-amber-600",
+                iconBg: "bg-amber-100",
+                label: "Publications",
+                desc: "Research, reports, and practical resources to inform and inspire action.",
+              },
+              {
+                href: "/activities/events",
+                icon: CalendarDays,
+                iconColor: "text-purple-600",
+                iconBg: "bg-purple-100",
+                label: "Events",
+                desc: "Workshops, forums, and field events that connect people and ideas.",
+              },
+            ].map((item) => (
+              <Link key={item.label} href={item.href} className="group block">
+                <div className="bg-white rounded-lg p-6 h-full border border-gray-200 hover:border-emerald-400 hover:shadow-md transition-all duration-200">
+                  <div className={`inline-flex items-center justify-center h-12 w-12 rounded-lg ${item.iconBg} mb-5`}>
+                    <item.icon className={`h-6 w-6 ${item.iconColor}`} />
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors"
+                    style={{ fontFamily: "'Oswald', sans-serif" }}
+                  >
+                    {item.label}
+                  </h3>
+                  <p className="text-sm text-gray-500 leading-relaxed mb-4">{item.desc}</p>
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-600 uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity">
+                    Explore <ArrowRight className="h-3 w-3" />
+                  </span>
+                </div>
+              </Link>
+            ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Link href="/activities">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
-              >
-                View All Activities
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+          <div className="mt-10">
+            <Link
+              href="/activities"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-900 uppercase tracking-wide transition-colors"
+              style={{ fontFamily: "'Oswald', sans-serif" }}
+            >
+              View All Activities <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Get Involved Section */}
-      <section id="get-involved" className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+      {/* ── Get Involved ── */}
+      <section id="get-involved" className="py-20 bg-[#0d2b1e] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 id="get-involved-heading" className="text-3xl md:text-4xl font-bold mb-4">Get Involved Today</h2> 
-            <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-95">
-              Every action counts. Join us—volunteer, donate, or access official documents to learn more about our organization.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="/volunteer" className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-white text-green-700 font-semibold hover:bg-gray-100">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-3">Take Action</p>
+              <h2
+                className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight"
+                style={{ fontFamily: "'Oswald', sans-serif" }}
+              >
+                Get Involved Today
+              </h2>
+              <div className="w-12 h-1 bg-amber-500 mb-6 rounded-full" />
+              <p className="text-white/70 text-lg leading-relaxed">
+                Every action counts. Join us — volunteer, donate, or access official documents to learn more
+                about our organization.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4">
+              <Link
+                href="/volunteer"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-sm bg-amber-500 hover:bg-amber-400 text-gray-900 font-semibold transition-all duration-200 w-full sm:w-auto"
+                style={{ fontFamily: "'Oswald', sans-serif" }}
+              >
                 Become a Volunteer
               </Link>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-600 bg-transparent">
+              <button
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-sm border border-white/25 hover:border-white/60 text-white/80 hover:text-white font-semibold transition-all duration-200 bg-white/5 hover:bg-white/10 w-full sm:w-auto"
+                style={{ fontFamily: "'Oswald', sans-serif" }}
+              >
                 Make a Donation
-              </Button>
+              </button>
             </div>
           </div>
 
-          <div className="mt-8">
+          <div className="border-t border-white/10 pt-12">
+            <p className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-6">Organizational Documents</p>
             <Documents />
           </div>
         </div>
