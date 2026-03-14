@@ -1,11 +1,12 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Documents from "@/components/ui/documents"
 import Hero from "@/components/ui/hero"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { Leaf, Droplets, Sun, GraduationCap, Users, Heart, ArrowRight, TreePine, Globe, Lightbulb } from "lucide-react"
+import { Droplets, Sun, GraduationCap, Users, Heart, ArrowRight, TreePine, Globe, Lightbulb } from "lucide-react"
 
 export default function HomePage() {
   return (
@@ -15,8 +16,14 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <Leaf className="h-8 w-8 text-green-600" />
-              <span className="text-2xl font-bold text-gray-900">Aaranya</span>
+              <Image
+                src="/docs/logo.jpg"
+                alt="Aaranya logo"
+                width={180}
+                height={60}
+                className="h-12 w-auto"
+                priority
+              />
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <Link href="#about" className="text-gray-700 hover:text-green-600 transition-colors">
@@ -25,8 +32,8 @@ export default function HomePage() {
               <Link href="#impact" className="text-gray-700 hover:text-green-600 transition-colors">
                 Impact
               </Link>
-              <Link href="/programs" className="text-gray-700 hover:text-green-600 transition-colors">
-                Programs
+              <Link href="/activities" className="text-gray-700 hover:text-green-600 transition-colors">
+                Activities
               </Link>
               <Link href="/gallery" className="text-gray-700 hover:text-green-600 transition-colors">
                 Gallery
@@ -118,68 +125,68 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Programs Section */}
+      {/* Activities Section */}
       <section role="region" aria-labelledby="programs-heading" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 id="programs-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Programs</h2>
+            <h2 id="programs-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Activities</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive initiatives addressing the most critical environmental challenges of our time.
+              Explore our key activity areas where we engage communities and drive climate action.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link href="/programs/reforestation">
+            <Link href="/activities/projects">
               <Card role="article" aria-labelledby="prog-ref-title" aria-describedby="prog-ref-desc" className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
                 <CardHeader className="text-center">
                   <TreePine className="h-12 w-12 text-green-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <CardTitle id="prog-ref-title" className="text-lg">Reforestation</CardTitle>
+                  <CardTitle id="prog-ref-title" className="text-lg">Projects</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription id="prog-ref-desc" className="text-center">
-                    Restoring forests and planting trees to combat deforestation and carbon emissions.
+                    Long-term, on-ground initiatives delivering measurable environmental impact.
                   </CardDescription>
                 </CardContent>
               </Card>
             </Link>
 
-            <Link href="/programs/clean-water">
+            <Link href="/activities/campaigns">
               <Card role="article" aria-labelledby="prog-water-title" aria-describedby="prog-water-desc" className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
                 <CardHeader className="text-center">
                   <Droplets className="h-12 w-12 text-blue-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <CardTitle id="prog-water-title" className="text-lg">Clean Water</CardTitle>
+                  <CardTitle id="prog-water-title" className="text-lg">Campaigns</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription id="prog-water-desc" className="text-center">
-                    Providing access to clean water and protecting water resources worldwide.
+                    Awareness and mobilization drives that encourage immediate climate action.
                   </CardDescription>
                 </CardContent>
               </Card>
             </Link>
 
-            <Link href="/programs/renewable-energy">
+            <Link href="/activities/publications">
               <Card role="article" aria-labelledby="prog-energy-title" aria-describedby="prog-energy-desc" className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
                 <CardHeader className="text-center">
                   <Sun className="h-12 w-12 text-yellow-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <CardTitle id="prog-energy-title" className="text-lg">Renewable Energy</CardTitle>
+                  <CardTitle id="prog-energy-title" className="text-lg">Publications</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription id="prog-energy-desc" className="text-center">
-                    Promoting solar, wind, and other renewable energy solutions.
+                    Research, reports, and practical resources to inform and inspire action.
                   </CardDescription>
                 </CardContent>
               </Card>
             </Link>
 
-            <Link href="/programs/climate-education">
+            <Link href="/activities/events">
               <Card role="article" aria-labelledby="prog-edu-title" aria-describedby="prog-edu-desc" className="hover:shadow-lg transition-all duration-300 cursor-pointer group">
                 <CardHeader className="text-center">
                   <GraduationCap className="h-12 w-12 text-purple-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <CardTitle id="prog-edu-title" className="text-lg">Climate Education</CardTitle>
+                  <CardTitle id="prog-edu-title" className="text-lg">Events</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription id="prog-edu-desc" className="text-center">
-                    Educating communities about climate change and sustainable practices.
+                    Workshops, forums, and field events that connect people and ideas.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -187,13 +194,13 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/programs">
+            <Link href="/activities">
               <Button
                 size="lg"
                 variant="outline"
                 className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
               >
-                View All Programs
+                View All Activities
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -232,8 +239,13 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <Leaf className="h-8 w-8 text-green-400" />
-                <span className="text-2xl font-bold">Aaranya</span>
+                <Image
+                  src="/docs/logo.jpg"
+                  alt="Aaranya logo"
+                  width={160}
+                  height={54}
+                  className="h-10 w-auto"
+                />
               </div>
               <p className="text-gray-400">
                 Building a sustainable future through environmental action and community engagement.
@@ -241,33 +253,33 @@ export default function HomePage() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4">Programs</h3>
+              <h3 className="text-lg font-semibold mb-4">Activities</h3>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <Link href="/programs/reforestation" className="hover:text-white transition-colors">
-                    Reforestation
+                  <Link href="/activities/projects" className="hover:text-white transition-colors">
+                    Projects
                   </Link>
                 </li>
                 <li>
-                  <Link href="/programs/clean-water" className="hover:text-white transition-colors">
-                    Clean Water
+                  <Link href="/activities/campaigns" className="hover:text-white transition-colors">
+                    Campaigns
                   </Link>
                 </li>
                 <li>
-                  <Link href="/programs/renewable-energy" className="hover:text-white transition-colors">
-                    Renewable Energy
+                  <Link href="/activities/publications" className="hover:text-white transition-colors">
+                    Publications
                   </Link>
                 </li>
                 <li>
-                  <Link href="/programs/climate-education" className="hover:text-white transition-colors">
-                    Climate Education
+                  <Link href="/activities/events" className="hover:text-white transition-colors">
+                    Events
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4">Get Involved</h3>
+              <h3 className="text-lg font-semibold mb-4">Contribute</h3>
               <ul className="space-y-2 text-gray-400">
                 <li>
                   <Link href="#volunteer" className="hover:text-white transition-colors">
@@ -285,18 +297,8 @@ export default function HomePage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#newsletter" className="hover:text-white transition-colors">
-                    Newsletter
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#get-involved" className="hover:text-white transition-colors">
-                    Organization Documents
-                  </Link>
-                </li>
-                <li>
                   <Link href="/gallery" className="hover:text-white transition-colors">
-                    Project Gallery
+                    Gallery
                   </Link>
                 </li>
               </ul>
@@ -305,12 +307,25 @@ export default function HomePage() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <ul className="space-y-2 text-gray-400">
-                <li>info@aaranya.org</li>
-                <li>+1 (555) 123-4567</li>
+              <li>
+                  <Link href="#get-involved" className="hover:text-white transition-colors">
+                    Documents
+                  </Link>
+                </li>
                 <li>
-                  123 Green Street
+                  <a href="mailto:aranyainitiatives@gmail.com" className="hover:text-white transition-colors">
+                    aranyainitiatives@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+9779841564743" className="hover:text-white transition-colors">
+                    +977 9841 564743
+                  </a>
+                </li>
+                <li>
+                  Suryabinayak - 5
                   <br />
-                  Eco City, EC 12345
+                  Bhaktapur, Nepal
                 </li>
               </ul>
             </div>

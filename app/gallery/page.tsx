@@ -171,8 +171,8 @@ export default function GalleryPage() {
               <Link href="/#impact" className="text-gray-700 hover:text-green-600 transition-colors">
                 Impact
               </Link>
-              <Link href="/programs" className="text-gray-700 hover:text-green-600 transition-colors">
-                Programs
+              <Link href="/activities" className="text-gray-700 hover:text-green-600 transition-colors">
+                Activities
               </Link>
               <Link href="/gallery" className="text-green-600 font-medium">
                 Gallery
@@ -381,26 +381,26 @@ export default function GalleryPage() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4">Programs</h3>
+              <h3 className="text-lg font-semibold mb-4">Activities</h3>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <Link href="/programs/reforestation" className="hover:text-white transition-colors">
-                    Reforestation
+                  <Link href="/activities/projects" className="hover:text-white transition-colors">
+                    Projects
                   </Link>
                 </li>
                 <li>
-                  <Link href="/programs/clean-water" className="hover:text-white transition-colors">
-                    Clean Water
+                  <Link href="/activities/campaigns" className="hover:text-white transition-colors">
+                    Campaigns
                   </Link>
                 </li>
                 <li>
-                  <Link href="/programs/renewable-energy" className="hover:text-white transition-colors">
-                    Renewable Energy
+                  <Link href="/activities/publications" className="hover:text-white transition-colors">
+                    Publications
                   </Link>
                 </li>
                 <li>
-                  <Link href="/programs/climate-education" className="hover:text-white transition-colors">
-                    Climate Education
+                  <Link href="/activities/events" className="hover:text-white transition-colors">
+                    Events
                   </Link>
                 </li>
               </ul>
