@@ -2,7 +2,8 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, Download, ExternalLink, FileText } from "lucide-react"
+import SiteFooter from "@/components/ui/site-footer"
+import { ArrowLeft, Download, ExternalLink } from "lucide-react"
 
 export default function PublicationsPage() {
   const publications = [
@@ -43,10 +44,10 @@ export default function PublicationsPage() {
 
       <section className="py-16">
         <div className="container px-4 md:px-6 mx-auto grid gap-6 md:grid-cols-2">
-          {publications.map((publication) => (
+          {publications.map((publication) => {
+            return (
             <Card key={publication.href}>
               <CardHeader>
-                <FileText className="h-8 w-8 text-yellow-600 mb-2" />
                 <CardTitle>{publication.title}</CardTitle>
                 <CardDescription>{publication.description}</CardDescription>
               </CardHeader>
@@ -72,9 +73,10 @@ export default function PublicationsPage() {
                 </div>
               </CardContent>
             </Card>
-          ))}
+          )})}
         </div>
       </section>
+      <SiteFooter />
     </div>
   )
 }

@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Documents from "@/components/ui/documents"
 import Hero from "@/components/ui/hero"
+import SiteFooter from "@/components/ui/site-footer"
 import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
 import { Droplets, Sun, GraduationCap, Users, Heart, ArrowRight, TreePine, Globe, Lightbulb } from "lucide-react"
 
 export default function HomePage() {
@@ -29,9 +29,6 @@ export default function HomePage() {
               <Link href="#about" className="text-gray-700 hover:text-green-600 transition-colors">
                 About
               </Link>
-              <Link href="#impact" className="text-gray-700 hover:text-green-600 transition-colors">
-                Impact
-              </Link>
               <Link href="/activities" className="text-gray-700 hover:text-green-600 transition-colors">
                 Activities
               </Link>
@@ -53,71 +50,80 @@ export default function HomePage() {
       {/* Hero Section */}
       <Hero />
 
-      {/* Impact Stats */}
-      <section role="region" aria-labelledby="impact-heading" className="py-16 bg-white">
-        <h2 id="impact-heading" className="sr-only">Impact statistics</h2>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="space-y-2" role="article" aria-labelledby="impact-trees" aria-describedby="impact-trees-desc">
-              <div id="impact-trees" className="text-4xl font-bold text-green-600">50K+</div>
-              <div id="impact-trees-desc" className="text-gray-600">Trees Planted</div>
-            </div>
-            <div className="space-y-2" role="article" aria-labelledby="impact-countries" aria-describedby="impact-countries-desc">
-              <div id="impact-countries" className="text-4xl font-bold text-green-600">25</div>
-              <div id="impact-countries-desc" className="text-gray-600">Countries</div>
-            </div>
-            <div className="space-y-2" role="article" aria-labelledby="impact-lives" aria-describedby="impact-lives-desc">
-              <div id="impact-lives" className="text-4xl font-bold text-green-600">100K+</div>
-              <div id="impact-lives-desc" className="text-gray-600">Lives Impacted</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Mission Section */}
       <section id="about" role="region" aria-labelledby="about-heading" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 id="about-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Mission</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Aaranya is dedicated to combating climate change through innovative solutions, community engagement, and
-              sustainable practices that protect our planet.
-            </p>
+          <div className="mb-12">
+            <h2 id="about-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+              About ARANYA
+            </h2>
+            <div className="max-w-5xl mx-auto space-y-4 text-base md:text-lg text-gray-700 leading-relaxed">
+              <p>
+                The climate crisis is not a singular challenge; it is a complex intersection of environmental degradation and systemic inequality. 
+                Action for Resilient Adaptation and Nature-based Energy Alternatives (ARANYA) is a non-governmental,
+                not-for-profit organization dedicated to advancing sustainable and equitable climate solutions.
+              </p>
+              <p>
+                Our work integrates mitigation, adaptation, and resilience, to tackle the intertwined challenges of
+                climate change through a holistic and interdisciplinary approach.
+              </p>
+              <p className="font-semibold text-gray-900">Our work is anchored in three core thematic areas:</p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card role="article" aria-labelledby="env-title" aria-describedby="env-desc" className="text-center hover:shadow-lg transition-shadow">
+            <Card
+              role="article"
+              aria-labelledby="cnn-title"
+              aria-describedby="cnn-desc"
+              className="text-center hover:shadow-lg transition-shadow"
+            >
               <CardHeader>
                 <Globe className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <CardTitle id="env-title">Environmental Protection</CardTitle>
+                <CardTitle id="cnn-title">Carbon Net Negative (CNN)</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription id="env-desc">
-                  Preserving ecosystems and biodiversity through conservation efforts and sustainable practices.
+                <CardDescription id="cnn-desc">
+                  Developing and promoting strategies that move beyond carbon neutrality towards emission removal
+                  through scientific and technological intervention that are community-driven and rooted in nature.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card
+              role="article"
+              aria-labelledby="jet-title"
+              aria-describedby="jet-desc"
+              className="text-center hover:shadow-lg transition-shadow"
+            >
               <CardHeader>
                 <Users className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <CardTitle>Community Engagement</CardTitle>
+                <CardTitle id="jet-title">Just Energy Transition (JET)</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
-                  Empowering local communities to become environmental stewards and climate action leaders.
+                <CardDescription id="jet-desc">
+                  Supporting a fair and inclusive shift from fossil fuels to renewable energy systems, ensuring that
+                  women, Indigenous peoples, and marginalized communities are meaningfully included in decision-making
+                  and benefit equitably from the transition.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card
+              role="article"
+              aria-labelledby="crc-title"
+              aria-describedby="crc-desc"
+              className="text-center hover:shadow-lg transition-shadow"
+            >
               <CardHeader>
                 <Lightbulb className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <CardTitle>Innovation</CardTitle>
+                <CardTitle id="crc-title">Climate Resilient Communities (CRC)</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
-                  Developing cutting-edge solutions and technologies to address climate challenges effectively.
+                <CardDescription id="crc-desc">
+                  Strengthening local capacities to tackle cross-cutting impacts of climate change by promoting
+                  resilience-building measures, knowledge sharing, and nature-based solutions tailored to diverse
+                  socio-ecological contexts.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -217,9 +223,9 @@ export default function HomePage() {
               Every action counts. Join us—volunteer, donate, partner, or access official documents to learn more about our organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a href="#volunteer" className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-white text-green-700 font-semibold hover:bg-gray-100">
+              <Link href="/volunteer" className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-white text-green-700 font-semibold hover:bg-gray-100">
                 Become a Volunteer
-              </a>
+              </Link>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-600 bg-transparent">
                 Make a Donation
               </Button>
@@ -232,120 +238,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer role="contentinfo" aria-labelledby="footer-heading" className="bg-gray-900 text-white py-12">
-        <h2 id="footer-heading" className="sr-only">Footer</h2>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <Image
-                  src="/docs/logo.jpg"
-                  alt="Aaranya logo"
-                  width={160}
-                  height={54}
-                  className="h-10 w-auto"
-                />
-              </div>
-              <p className="text-gray-400">
-                Building a sustainable future through environmental action and community engagement.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Activities</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="/activities/projects" className="hover:text-white transition-colors">
-                    Projects
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/activities/campaigns" className="hover:text-white transition-colors">
-                    Campaigns
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/activities/publications" className="hover:text-white transition-colors">
-                    Publications
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/activities/events" className="hover:text-white transition-colors">
-                    Events
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Contribute</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="#volunteer" className="hover:text-white transition-colors">
-                    Volunteer
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#donate" className="hover:text-white transition-colors">
-                    Donate
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#partner" className="hover:text-white transition-colors">
-                    Partner With Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/gallery" className="hover:text-white transition-colors">
-                    Gallery
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Contact</h3>
-              <ul className="space-y-2 text-gray-400">
-              <li>
-                  <Link href="#get-involved" className="hover:text-white transition-colors">
-                    Documents
-                  </Link>
-                </li>
-                <li>
-                  <a href="mailto:aranyainitiatives@gmail.com" className="hover:text-white transition-colors">
-                    aranyainitiatives@gmail.com
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+9779841564743" className="hover:text-white transition-colors">
-                    +977 9841 564743
-                  </a>
-                </li>
-                <li>
-                  Suryabinayak - 5
-                  <br />
-                  Bhaktapur, Nepal
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <Separator className="my-8 bg-gray-700" />
-
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400">© 2024 Aaranya. All rights reserved.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="#privacy" className="text-gray-400 hover:text-white transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="#terms" className="text-gray-400 hover:text-white transition-colors">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   )
 }

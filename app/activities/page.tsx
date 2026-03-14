@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import SiteFooter from "@/components/ui/site-footer"
 import { ArrowRight, TreePine, Droplets, Sun, GraduationCap } from "lucide-react"
 
 const activities = [
@@ -75,6 +76,7 @@ export default function ActivitiesPage() {
           })}
         </div>
       </section>
+      <SiteFooter />
     </div>
   )
 }

@@ -1,10 +1,20 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, ArrowRight, TreePine, Globe, Users } from "lucide-react"
+import SiteFooter from "@/components/ui/site-footer"
+import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react"
 
 export default function ProjectsPage() {
+  const projects = [
+    {
+      title: "JET Consultation Project at Bojheni",
+      description:
+        "A rights-based project that helps local and Indigenous communities navigate renewable energy expansion with accessible legal and policy tools.",
+      href: "/activities/projects/jet-toolkit",
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
       <section className="py-16 bg-gradient-to-br from-green-50 to-emerald-100">
@@ -14,8 +24,8 @@ export default function ProjectsPage() {
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Projects</h1>
           <p className="text-lg text-gray-700 max-w-3xl">
-            Our projects focus on long-term climate solutions through ecosystem restoration, sustainable infrastructure,
-            and community-led environmental initiatives.
+            Explore our ongoing project portfolio. Open a project to view full details, implementation approach, and
+            impact focus areas.
           </p>
           <div className="mt-8 flex gap-3">
             <Link href="/">
@@ -35,36 +45,27 @@ export default function ProjectsPage() {
       </section>
 
       <section className="py-16">
-        <div className="container px-4 md:px-6 mx-auto grid gap-6 md:grid-cols-3">
-          <Card>
-            <CardHeader>
-              <TreePine className="h-8 w-8 text-green-600 mb-2" />
-              <CardTitle>Forest Restoration</CardTitle>
-            </CardHeader>
-            <CardContent className="text-sm text-gray-600">
-              Native tree plantation and soil rehabilitation in degraded landscapes.
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <Globe className="h-8 w-8 text-green-600 mb-2" />
-              <CardTitle>Climate Resilience</CardTitle>
-            </CardHeader>
-            <CardContent className="text-sm text-gray-600">
-              Local adaptation projects that reduce climate risks for vulnerable communities.
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <Users className="h-8 w-8 text-green-600 mb-2" />
-              <CardTitle>Community Partnerships</CardTitle>
-            </CardHeader>
-            <CardContent className="text-sm text-gray-600">
-              Collaborative project delivery with municipalities, schools, and civil groups.
-            </CardContent>
-          </Card>
+        <div className="container px-4 md:px-6 mx-auto grid gap-6 md:grid-cols-2">
+          {projects.map((project) => (
+            <Card key={project.href}>
+              <CardHeader>
+                <CardTitle>{project.title}</CardTitle>
+                <CardDescription>{project.description}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Link
+                  href={project.href}
+                  className="inline-flex items-center text-sm font-medium text-green-700 hover:underline"
+                >
+                  Open project details
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </Link>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </section>
+      <SiteFooter />
     </div>
   )
 }

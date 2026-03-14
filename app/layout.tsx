@@ -4,25 +4,27 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Aaranya - Building a Sustainable Future",
+  title: "Aaranya",
   description:
-    "Join Aaranya in the fight against climate change through innovative solutions, community engagement, and sustainable practices that protect our planet.",
+    "ARANYA is a non-profit dedicated to advancing equitable climate solutions through carbon-negative strategies, inclusive renewable energy transitions, and nature-based community resilience.",
   keywords:
     "climate change, sustainability, environment, reforestation, clean water, renewable energy, climate education",
   authors: [{ name: "Aaranya" }],
   creator: "Aaranya",
   publisher: "Aaranya",
   openGraph: {
-    title: "Aaranya - Building a Sustainable Future",
-    description: "Join us in the fight against climate change through innovative environmental solutions.",
+    title: "Aaranya",
+    description:
+      "ARANYA is a non-profit dedicated to advancing equitable climate solutions through carbon-negative strategies, inclusive renewable energy transitions, and nature-based community resilience.",
     url: "https://aaranya.org",
     siteName: "Aaranya",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aaranya - Building a Sustainable Future",
-    description: "Join us in the fight against climate change through innovative environmental solutions.",
+    title: "Aaranya",
+    description:
+      "ARANYA is a non-profit dedicated to advancing equitable climate solutions through carbon-negative strategies, inclusive renewable energy transitions, and nature-based community resilience.",
   },
   robots: {
     index: true,
