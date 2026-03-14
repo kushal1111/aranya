@@ -70,7 +70,7 @@ export default function Hero() {
           <div className="flex flex-wrap gap-8 mt-14 pt-10 border-t border-white/10">
             {[
               { value: "3", label: "Core Thematic Areas" },
-              { value: "100+", label: "Communities Reached" },
+              { value: "100+", label: "Peoples Reached" },
               { value: "2", label: "Publications" },
             ].map((stat) => (
               <div key={stat.label}>
