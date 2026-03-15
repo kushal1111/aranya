@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Compass, FolderOpen, Megaphone, BookOpen, CalendarDays, Mail, Phone, MapPin } from "lucide-react"
+import { Compass, FolderOpen, Megaphone, BookOpen, CalendarDays, Mail, Phone, MapPin, Users } from "lucide-react"
 
 export default function SiteFooter() {
   return (
@@ -38,7 +38,6 @@ export default function SiteFooter() {
             <ul className="space-y-3">
               {[
                 { href: "/activities/projects", icon: FolderOpen, label: "Projects" },
-                { href: "/activities/campaigns", icon: Megaphone, label: "Campaigns" },
                 { href: "/activities/publications", icon: BookOpen, label: "Publications" },
                 { href: "/activities/events", icon: CalendarDays, label: "Events" },
               ].map((item) => (
@@ -92,6 +91,15 @@ export default function SiteFooter() {
               Contact
             </h3>
             <ul className="space-y-4">
+            <li>
+                <Link
+                  href="/our-team"
+                  className="inline-flex items-start gap-2.5 text-sm text-white/55 hover:text-white transition-colors duration-150"
+                >
+                  <Users className="h-4 w-4 text-white/30 mt-0.5 shrink-0" />
+                  Our Team
+                </Link>
+              </li>
               <li>
                 <a
                   href="mailto:aranyainitiatives@gmail.com"
@@ -99,15 +107,6 @@ export default function SiteFooter() {
                 >
                   <Mail className="h-4 w-4 text-white/30 mt-0.5 shrink-0" />
                   aranyainitiatives@gmail.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+9779841564743"
-                  className="inline-flex items-center gap-2.5 text-sm text-white/55 hover:text-white transition-colors duration-150"
-                >
-                  <Phone className="h-4 w-4 text-white/30 shrink-0" />
-                  +977 9841 564743
                 </a>
               </li>
               <li>

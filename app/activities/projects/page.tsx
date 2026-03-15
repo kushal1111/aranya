@@ -8,7 +8,7 @@ import { ArrowLeft, ArrowRight, ExternalLink, FolderOpen } from "lucide-react"
 export default function ProjectsPage() {
   const projects = [
     {
-      title: "JET Consultation Project at Bojheni",
+      title: "Just Energy Transition Advocacy Workshop",
       description:
         "A rights-based project that helps local and Indigenous communities navigate renewable energy expansion with accessible legal and policy tools.",
       href: "/activities/projects/jet-toolkit",
@@ -37,12 +37,6 @@ export default function ProjectsPage() {
               <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 bg-transparent">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Home
-              </Button>
-            </Link>
-            <Link href="/activities/campaigns">
-              <Button className="bg-amber-500 hover:bg-amber-400 text-gray-900">
-                Next: Campaigns
-                <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
           </div>

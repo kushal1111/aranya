@@ -15,7 +15,7 @@ export default function PublicationsPage() {
     {
       title: "Advocacy Paper: Feminist Just Energy Transition",
       description: "Advocacy paper focused on feminist perspectives in a just energy transition.",
-      href: "/docs/Advocacy%20Paper%20Feminist%20Just%20Energy%20Transition.pdf",
+      href: "/docs/Feminist%20Just%20Energy%20Transition%20in%20Nepal_Paper.pdf",
     },
   ]
 

@@ -47,7 +47,7 @@ export default function JetBojheniGalleryPage() {
 
           <Badge className="mb-4 bg-emerald-100 text-emerald-800">Just Energy Transition</Badge>
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>
-            Just Energy Transition Consultation Workshop
+            Just Energy Transition Advocacy Workshop
           </h1>
           <div className="w-12 h-1 bg-amber-500 mb-6 rounded-full" />
 

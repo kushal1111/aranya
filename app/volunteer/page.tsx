@@ -56,12 +56,6 @@ export default function VolunteerPage() {
                   aranyainitiatives@gmail.com
                 </a>
               </p>
-              <p className="inline-flex items-center gap-2">
-                <Phone className="h-4 w-4 text-emerald-700" />
-                <a href="tel:+9779841564743" className="text-emerald-700 hover:text-emerald-900">
-                  +977 9841 564743
-                </a>
-              </p>
             </CardContent>
           </Card>
         </div>
