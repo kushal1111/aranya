@@ -1,8 +1,10 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import SiteFooter from "@/components/ui/site-footer"
 import SiteHeader from "@/components/ui/site-header"
+import workshopPhoto from "@/app/images/WhatsApp Image 2026-03-14 at 2.21.35 PM.jpeg"
 import {
   ArrowLeft,
   Landmark,
@@ -23,7 +25,7 @@ export default function JetToolkitProjectPage() {
             Projects
           </p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>
-            JET Consultation Project at Bojheni
+            Just Energy Transition Advocacy Workshop
           </h1>
           <div className="w-12 h-1 bg-amber-500 mb-6 rounded-full" />
           <p className="text-lg text-white/75 max-w-4xl leading-relaxed">
@@ -65,6 +67,29 @@ export default function JetToolkitProjectPage() {
                 identify protections they are legally entitled to and translate
                 legal awareness into collective action against hydroelectric
                 transmission line and sub-station construction.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border border-gray-200 overflow-hidden">
+            <CardHeader>
+              <CardTitle className="text-2xl text-gray-900" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                Workshop Snapshot
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="relative w-full h-[260px] sm:h-[360px] md:h-[440px] rounded-md overflow-hidden border border-gray-100">
+                <Image
+                  src={workshopPhoto}
+                  alt="Community workshop session during JET consultation in Bojheni"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 960px"
+                />
+              </div>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Community members and facilitators co-create local strategies by discussing rights, risks, and
+                practical pathways for equitable renewable energy transitions.
               </p>
             </CardContent>
           </Card>
@@ -120,7 +145,7 @@ export default function JetToolkitProjectPage() {
           <div className="grid gap-6 md:grid-cols-1">
             <Card className="border border-gray-200">
               <CardHeader>
-                <CardTitle className="text-2xl text-gray-900" style={{ fontFamily: "'Oswald', sans-serif" }}>Consultation Workshops</CardTitle>
+                <CardTitle className="text-2xl text-gray-900" style={{ fontFamily: "'Oswald', sans-serif" }}>Advocacy Workshops</CardTitle>
               </CardHeader>
               <CardContent className="text-sm text-gray-600 leading-relaxed">
                 <p>

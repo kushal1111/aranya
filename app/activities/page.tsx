@@ -13,13 +13,6 @@ const activities = [
     color: "text-green-600",
   },
   {
-    title: "Campaigns",
-    href: "/activities/campaigns",
-    description: "Community and public mobilization for climate awareness and action.",
-    icon: Megaphone,
-    color: "text-blue-600",
-  },
-  {
     title: "Publications",
     href: "/activities/publications",
     description: "Reports, insights, and practical resources to spread knowledge.",
@@ -55,7 +48,7 @@ export default function ActivitiesPage() {
           </h1>
           <div className="w-12 h-1 bg-amber-500 mb-6 rounded-full" />
           <p className="text-lg text-white/75 max-w-3xl">
-            Discover how we create environmental impact through projects, campaigns, publications, and events.
+            Discover how we create environmental impact through projects, publications, and events.
           </p>
         </div>
       </section>

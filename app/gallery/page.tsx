@@ -10,7 +10,7 @@ import SiteHeader from "@/components/ui/site-header"
 import { MapPin, Calendar, Images } from "lucide-react"
 import bojheniPhoto1 from "@/app/images/WhatsApp Image 2026-03-14 at 2.21.34 PM.jpeg"
 const project = {
-  title: "Just Energy Transition Consultation Workshop",
+  title: "Just Energy Transition Advocacy Workshop",
   location: "Bojheni, Nepal",
   date: "2026",
   image: bojheniPhoto1,

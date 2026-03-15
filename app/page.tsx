@@ -132,14 +132,6 @@ export default function HomePage() {
                 desc: "Long-term, on-ground initiatives delivering measurable environmental impact.",
               },
               {
-                href: "/activities/campaigns",
-                icon: Megaphone,
-                iconColor: "text-blue-600",
-                iconBg: "bg-blue-100",
-                label: "Campaigns",
-                desc: "Awareness and mobilization drives that encourage immediate climate action.",
-              },
-              {
                 href: "/activities/publications",
                 icon: BookOpen,
                 iconColor: "text-amber-600",
