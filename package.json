@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "opennextjs-cloudflare build",
+    "build:vercel": "next build",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
@@ -50,7 +51,7 @@
     "embla-carousel-react": "latest",
     "input-otp": "latest",
     "lucide-react": "^0.454.0",
-    "next": "15.2.8",
+    "next": "15.5.18",
     "next-themes": "latest",
     "react": "^19",
     "react-day-picker": "latest",
@@ -82,7 +83,9 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "@vercel/speed-insights",
-      "sharp"
+      "sharp",
+      "esbuild",
+      "workerd"
     ]
   }
 }
