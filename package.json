@@ -8,10 +8,13 @@
     "lint": "next lint",
     "start": "next start",
     "test:e2e": "playwright test",
-    "test:e2e:headed": "playwright test --headed"
+    "test:e2e:headed": "playwright test --headed",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
+    "@opennextjs/cloudflare": "^1.20.1",
     "@radix-ui/react-accordion": "latest",
     "@radix-ui/react-alert-dialog": "latest",
     "@radix-ui/react-aspect-ratio": "latest",
@@ -62,6 +65,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.40.0",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -70,7 +74,7 @@
     "postcss": "^8.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5",
-    "@playwright/test": "^1.40.0"
+    "wrangler": "^4.110.0"
   },
   "engines": {
     "node": ">=18.0.0"
