@@ -1,11 +1,12 @@
-Please add your official PDF documents here with the following filenames:
+# Organization documents
 
-- company-registration.pdf
-- pan-registration.pdf
-- letter-generation.pdf
-- signed-moa.pdf
-- signed-aoa.pdf
+Add official PDF documents to this folder. Files here are served as static assets at `/docs/<filename>.pdf`.
 
-You can now also upload PDFs from the admin page at `/admin/upload` (development convenience). Note: uploads save files into `/public/docs` on the server; many serverless hosts (e.g., Vercel, Netlify) do not persist runtime filesystem changes — prefer external storage (S3) for production deployments.
+Suggested filenames:
 
-When files are present, they'll be accessible on the site at `/docs/<filename>.pdf` and visible in the "Get Involved" section.
+- `company-registration.pdf`
+- `pan-registration.pdf`
+- `signed-moa.pdf`
+- `signed-aoa.pdf`
+
+When present, they appear in the site documents section and can be opened or downloaded from those links.

@@ -5,7 +5,7 @@ import Documents from "@/components/ui/documents"
 import Hero from "@/components/ui/hero"
 import SiteFooter from "@/components/ui/site-footer"
 import SiteHeader from "@/components/ui/site-header"
-import { FolderOpen, Megaphone, BookOpen, CalendarDays, ArrowRight, Globe, Users, Lightbulb } from "lucide-react"
+import { FolderOpen, BookOpen, CalendarDays, ArrowRight, Globe, Users, Lightbulb } from "lucide-react"
 
 export default function HomePage() {
   return (

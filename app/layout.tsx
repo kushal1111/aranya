@@ -1,6 +1,5 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -12,11 +11,15 @@ export const metadata: Metadata = {
   authors: [{ name: "Aaranya" }],
   creator: "Aaranya",
   publisher: "Aaranya",
+  icons: {
+    icon: "/docs/logo.jpg",
+    apple: "/docs/logo.jpg",
+  },
   openGraph: {
     title: "Aaranya",
     description:
       "ARANYA is a non-profit dedicated to advancing equitable climate solutions through carbon-negative strategies, inclusive renewable energy transitions, and nature-based community resilience.",
-    url: "https://aaranya.org",
+    url: "https://aranyainitiatives.org",
     siteName: "Aaranya",
     type: "website",
   },
@@ -30,7 +33,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -41,8 +43,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#16a34a" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,7 +52,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-screen bg-background font-sans antialiased">{children} <SpeedInsights /></body>
-    </html> 
+      <body className="min-h-screen bg-background font-sans antialiased">{children}</body>
+    </html>
   )
 }

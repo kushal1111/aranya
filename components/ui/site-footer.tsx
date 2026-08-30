@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Compass, FolderOpen, Megaphone, BookOpen, CalendarDays, Mail, Phone, MapPin, Users } from "lucide-react"
+import { FolderOpen, BookOpen, CalendarDays, Mail, MapPin, Users } from "lucide-react"
 
 export default function SiteFooter() {
   return (

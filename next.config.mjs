@@ -1,3 +1,5 @@
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare"
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -8,14 +10,12 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
-    domains: ['placeholder.svg'],
   },
   experimental: {
-    optimizePackageImports: ['lucide-react'],
+    optimizePackageImports: ["lucide-react"],
   },
 }
 
 export default nextConfig
 
-import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare"
 initOpenNextCloudflareForDev()

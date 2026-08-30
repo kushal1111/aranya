@@ -1,148 +1,89 @@
-# Aaranya - Climate Action Website
+# Aaranya — Climate Action Website
 
-A modern, responsive website for Aaranya, a climate change NGO focused on building a sustainable future through environmental conservation and community engagement.
+Website for **ARANYA** (Action for Resilient Adaptation and Nature-based Energy Alternatives), a Nepal-based non-profit focused on equitable climate solutions, just energy transition, and nature-based community resilience.
 
-## Features
+## Tech stack
 
-- **Responsive Design**: Works seamlessly across all devices
-- **Modern UI**: Built with Next.js 15, TypeScript, and Tailwind CSS
-- **Program Pages**: Dedicated pages for Reforestation, Clean Water, Climate Education, and Renewable Energy
-- **Performance Optimized**: Fast loading and SEO-friendly
-- **Accessibility**: WCAG compliant design
+- **Next.js 15** (App Router) + TypeScript
+- **Tailwind CSS** + shadcn/ui primitives
+- **Cloudflare Workers** via [OpenNext](https://opennext.js.org/cloudflare)
 
-## Programs
+## Pages
 
-### 🌳 Reforestation Initiative
-- Tree planting and forest restoration
-- Carbon sequestration projects
-- Community engagement
+| Route | Description |
+|-------|-------------|
+| `/` | Home — about, activities overview, documents |
+| `/activities` | Activities hub |
+| `/activities/projects` | Projects |
+| `/activities/projects/jet-toolkit` | JET toolkit project |
+| `/activities/publications` | Publications |
+| `/activities/events` | Events |
+| `/gallery` | Gallery |
+| `/gallery/jet-bojheni` | JET Bojheni gallery |
+| `/partners` | Partners |
+| `/volunteer` | Volunteer |
+| `/our-team` | Our team |
 
-### 💧 Clean Water Access
-- Well construction and water filtration
-- Sustainable water solutions
-- Community health improvement
+Organization PDFs live in `public/docs/` and are served as static files at `/docs/<filename>.pdf`.
 
-### 📚 Climate Education
-- School programs and community workshops
-- Online learning platforms
-- Awareness campaigns
+## Getting started
 
-### ⚡ Renewable Energy
-- Solar and wind power installations
-- Energy storage solutions
-- Clean energy transition
+**Prerequisites:** Node.js 18+ and [pnpm](https://pnpm.io/).
 
-## Tech Stack
+```bash
+pnpm install
+pnpm dev
+```
 
-- **Framework**: Next.js 15 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
-- **Icons**: Lucide React
-- **Deployment**: Vercel
+Open [http://localhost:3000](http://localhost:3000).
 
-## Getting Started
+## Scripts
 
-### Prerequisites
+| Script | Purpose |
+|--------|---------|
+| `pnpm dev` | Local Next.js development |
+| `pnpm build` | Production build for Cloudflare (OpenNext) |
+| `pnpm preview` | Build and preview the Worker locally with Wrangler |
+| `pnpm deploy` | Build and deploy to Cloudflare Workers |
+| `pnpm lint` | Run Next.js lint |
 
-- Node.js 18.0.0 or higher
-- npm or yarn
+## Deploy to Cloudflare
 
-### Installation
+1. Log in to Cloudflare (once):
 
-1. Clone the repository:
-\`\`\`bash
-git clone https://github.com/your-username/aaranya-website.git
-cd aaranya-website
-\`\`\`
+   ```bash
+   pnpm exec wrangler login
+   ```
 
-2. Install dependencies:
-\`\`\`bash
-npm install
-\`\`\`
+2. Preview locally (optional):
 
-3. Run the development server:
-\`\`\`bash
-npm run dev
-\`\`\`
+   ```bash
+   pnpm preview
+   ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+3. Deploy:
 
-## Deployment
+   ```bash
+   pnpm deploy
+   ```
 
-This project is optimized for deployment on Vercel:
+The Worker name is `aaranya-climate-website` (see `wrangler.jsonc`). No environment secrets are required for the public site.
 
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy automatically with each push to main branch
+## Project structure
 
-### Environment Variables
-
-This project uses a small set of environment variables for admin access and optional production storage. Add these in your host (Vercel Environment Variables, GitHub Secrets, etc.) and do not commit them to source.
-
-Required for admin management (set these in production):
-
-- `ADMIN_PASSWORD` — strong password used to authenticate to `/admin/login`.
-- `ADMIN_SECRET` — random secret used to sign the admin session cookie.
-
-Optional (recommended) — external storage (S3) for production file uploads:
-
-- `AWS_REGION` — region for your S3 bucket (ex: us-east-1)
-- `S3_BUCKET` — name of the S3 bucket used for document storage
-- `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` — credentials for an IAM user with PutObject/GetObject on the bucket
-
-Tip: add these variables using your host's secrets UI (Vercel Dashboard, GitHub Secrets). See `.env.example` for a template.
-
-## Project Structure
-
-\`\`\`
-├── app/
-│   ├── globals.css
-│   ├── layout.tsx
-│   ├── page.tsx
-│   └── programs/
-│       ├── page.tsx
-│       ├── reforestation/
-│       ├── clean-water/
-│       ├── climate-education/
-│       └── renewable-energy/
-├── components/
-│   └── ui/
-├── lib/
-├── public/
-└── ...config files
-\`\`\`
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License.
+```
+├── app/                 # App Router pages and layouts
+├── components/ui/       # Site UI (header, footer, hero, documents, …)
+├── lib/                 # Shared utilities
+├── public/docs/         # Static PDFs and logo
+├── scripts/build.mjs    # OpenNext Cloudflare build wrapper
+├── open-next.config.ts
+├── wrangler.jsonc
+└── next.config.mjs
+```
 
 ## Contact
 
-- Website: [aaranya.org](https://aaranya.org)
-- Email: info@aaranya.org
-- Phone: +1 (555) 123-4567
-
----
-
-Built with ❤️ for a sustainable future.
-
-Running end-to-end tests
-------------------------
-
-I added Playwright-based end-to-end tests that verify the admin auth & middleware redirects.
-
-- Install dev deps: `pnpm install --save-dev @playwright/test`
-- Install browsers: `npx playwright install`
-- Set env var `ADMIN_PASSWORD` before running the auth test (the test will be skipped if it's not set):
-
-  ADMIN_PASSWORD=yourpassword pnpm test:e2e
-
-There is also a GitHub Action at `.github/workflows/e2e.yml` that runs tests on push to `main` (set `ADMIN_PASSWORD` in your repository secrets to enable the auth test in CI`).
+- Website: [aranyainitiatives.org](https://aranyainitiatives.org)
+- Email: aranyainitiatives@gmail.com
+- Address: Suryabinayak-5, Bhaktapur, Nepal

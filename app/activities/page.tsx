@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import SiteFooter from "@/components/ui/site-footer"
 import SiteHeader from "@/components/ui/site-header"
-import { ArrowRight, FolderOpen, Megaphone, BookOpen, CalendarDays } from "lucide-react"
+import { ArrowRight, FolderOpen, BookOpen, CalendarDays } from "lucide-react"
 
 const activities = [
   {
