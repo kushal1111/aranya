@@ -83,4 +83,9 @@ export const rootMetadata: Metadata = {
     title: HOME_TITLE,
     description: HOME_DESCRIPTION,
   },
+  verification: {
+    other: {
+      "msvalidate.01": "A2C246C009BBC5731C94F1CCEAC3043F",
+    },
+  },
 }
