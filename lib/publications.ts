@@ -1,6 +1,8 @@
 export type Publication = {
   slug: string
   title: string
+  /** Shorter title for browser/SEO when the full title exceeds ~60 characters with the brand suffix. */
+  seoTitle?: string
   description: string
   pdfPath: string
   path: string
@@ -18,6 +20,7 @@ export const publications: Publication[] = [
   {
     slug: "feminist-just-energy-transition",
     title: "Advocacy Paper: Feminist Just Energy Transition",
+    seoTitle: "Feminist Just Energy Transition",
     description:
       "Advocacy paper focused on feminist perspectives in a just energy transition.",
     pdfPath: "/docs/Feminist%20Just%20Energy%20Transition%20in%20Nepal_Paper.pdf",

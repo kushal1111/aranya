@@ -19,7 +19,7 @@ const description =
   "Organizations that work with ARANYA Initiatives on equitable climate action, community resilience, and just energy transition."
 
 export const metadata = createPageMetadata({
-  title: "Partners",
+  title: "Our Partners",
   description,
   path: "/partners",
 })

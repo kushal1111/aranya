@@ -12,7 +12,7 @@ const description =
   "ARANYA Initiatives event listings will appear here when workshops, consultations, or public conversations are confirmed."
 
 export const metadata = createPageMetadata({
-  title: "Events",
+  title: "Upcoming Events",
   description,
   path: "/activities/events",
   index: false,

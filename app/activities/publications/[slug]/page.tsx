@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps) {
   if (!publication) return {}
 
   return createPageMetadata({
-    title: publication.title,
+    title: publication.seoTitle ?? publication.title,
     description: publication.description,
     path: publication.path,
   })

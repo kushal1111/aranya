@@ -12,7 +12,7 @@ const description =
   "Volunteer with ARANYA Initiatives on community outreach, research, communications, and climate advocacy. Contact the team by email."
 
 export const metadata = createPageMetadata({
-  title: "Volunteer",
+  title: "Volunteer With Us",
   description,
   path: "/volunteer",
 })

@@ -10,7 +10,7 @@ const description =
   "Contact ARANYA Initiatives in Suryabinayak-5, Bhaktapur, Nepal, or email aranyainitiatives@gmail.com."
 
 export const metadata = createPageMetadata({
-  title: "Contact",
+  title: "Contact in Nepal",
   description,
   path: "/contact",
 })

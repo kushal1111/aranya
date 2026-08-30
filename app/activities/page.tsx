@@ -11,7 +11,7 @@ const description =
   "Explore ARANYA Initiatives projects, publications and events supporting climate resilience, community adaptation and just energy transition."
 
 export const metadata = createPageMetadata({
-  title: "Activities",
+  title: "Our Activities",
   description,
   path: "/activities",
 })

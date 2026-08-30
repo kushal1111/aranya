@@ -12,7 +12,7 @@ const description =
   "Team profiles for ARANYA Initiatives will be published here when staff names and biographies are confirmed."
 
 export const metadata = createPageMetadata({
-  title: "Our Team",
+  title: "Meet Our Team",
   description,
   path: "/our-team",
   index: false,
