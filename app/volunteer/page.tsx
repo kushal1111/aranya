@@ -9,7 +9,7 @@ import { ORG_NAME, ORG_SHORT, SITE_EMAIL } from "@/lib/site"
 import { ArrowLeft, Mail } from "lucide-react"
 
 const description =
-  "Volunteer with Aranya Initiatives on community outreach, research, communications, and advocacy. Contact the team by email."
+  "Volunteer with ARANYA Initiatives on community outreach, research, communications, and advocacy. Contact the team by email."
 
 export const metadata = createPageMetadata({
   title: "Volunteer With Us",

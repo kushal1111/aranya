@@ -11,7 +11,7 @@ import workshopPhoto from "@/app/images/WhatsApp Image 2026-03-14 at 2.21.35 PM.
 import { ArrowLeft, Landmark, Scale, Users } from "lucide-react"
 
 const description =
-  "Aranya Initiatives hosted a just energy transition advocacy workshop in Bojheni, Shankharapur Municipality, to strengthen community legal literacy."
+  "ARANYA Initiatives hosted a just energy transition advocacy workshop in Bojheni, Shankharapur Municipality, to strengthen community legal literacy."
 
 export const metadata = createPageMetadata({
   title: "JET Advocacy Workshop",

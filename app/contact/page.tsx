@@ -7,7 +7,7 @@ import { ORG_ADDRESS_LINE, ORG_NAME, SITE_EMAIL } from "@/lib/site"
 import { Mail, MapPin } from "lucide-react"
 
 const description =
-  "Contact Aranya Initiatives in Suryabinayak-5, Bhaktapur, Nepal, or email aranyainitiatives@gmail.com."
+  "Contact ARANYA Initiatives in Suryabinayak-5, Bhaktapur, Nepal, or email aranyainitiatives@gmail.com."
 
 export const metadata = createPageMetadata({
   title: "Contact in Nepal",

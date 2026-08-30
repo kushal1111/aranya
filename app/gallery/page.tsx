@@ -12,7 +12,7 @@ import { MapPin, Calendar, Images } from "lucide-react"
 import bojheniPhoto1 from "@/app/images/WhatsApp Image 2026-03-14 at 2.21.34 PM.jpeg"
 
 const description =
-  "Photographs from Aranya Initiatives field work on just energy transition, including the advocacy workshop in Bojheni, Nepal."
+  "Photographs from ARANYA Initiatives field work on just energy transition, including the advocacy workshop in Bojheni, Nepal."
 
 export const metadata = createPageMetadata({
   title: "Project Gallery",
@@ -109,7 +109,7 @@ export default function GalleryPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Join Our Next Project</h2>
           <p className="text-lg mb-8 max-w-3xl mx-auto text-white/75">
-            Be part of {ORG_SHORT}&apos;s work on advocacy, research, and accountability.
+            Be part of {ORG_SHORT}&apos;s work on advocacy, research, and actions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/volunteer">

@@ -9,7 +9,7 @@ import { ORG_NAME, ORG_SHORT } from "@/lib/site"
 import { ArrowLeft, ArrowRight, FolderOpen } from "lucide-react"
 
 const description =
-  "Review Aranya Initiatives projects, including the Just Energy Transition advocacy workshop in Bojheni, Nepal."
+  "Review ARANYA Initiatives projects, including the Just Energy Transition advocacy workshop in Bojheni, Nepal."
 
 export const metadata = createPageMetadata({
   title: "Projects",

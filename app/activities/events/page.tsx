@@ -9,7 +9,7 @@ import { ORG_NAME, ORG_SHORT } from "@/lib/site"
 import { ArrowLeft, CalendarDays } from "lucide-react"
 
 const description =
-  "Aranya Initiatives event listings will appear here when workshops, consultations, or public conversations are confirmed."
+  "ARANYA Initiatives event listings will appear here when workshops, consultations, or public conversations are confirmed."
 
 export const metadata = createPageMetadata({
   title: "Upcoming Events",

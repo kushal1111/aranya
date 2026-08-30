@@ -1,11 +1,11 @@
 export const SITE_URL = "https://aranyainitiatives.org" as const
 
-export const ORG_NAME = "Aranya Initiatives" as const
-export const ORG_SHORT = "Aranya" as const
+export const ORG_NAME = "ARANYA Initiatives" as const
+export const ORG_SHORT = "ARANYA" as const
 export const ORG_EXPANDED =
-  "Aranya Initiatives for Advocacy, Research and Accountability" as const
+  "ARANYA Initiatives for Advocacy, Research and Actions" as const
 export const ORG_TAGLINE = ORG_EXPANDED
-export const ORG_TAGLINE_SUFFIX = "for Advocacy, Research and Accountability" as const
+export const ORG_TAGLINE_SUFFIX = "for Advocacy, Research and Actions" as const
 
 export const ORG_VISION =
   "We envision a just, inclusive and democratic Nepal where institutions are accountable to its people." as const
@@ -31,13 +31,13 @@ export const ORGANIZATION_ID = `${SITE_URL}/#organization` as const
 export const WEBSITE_ID = `${SITE_URL}/#website` as const
 
 export const HOME_TITLE =
-  "Aranya Initiatives | Advocacy, Research and Accountability" as const
+  "ARANYA Initiatives | Advocacy, Research and Actions" as const
 
 export const HOME_DESCRIPTION =
-  "Aranya Initiatives for Advocacy, Research and Accountability — building a fair and democratic Nepal through democracy and governance, human rights, just energy transition, disaster and climate resilient communities, and reducing inequalities." as const
+  "ARANYA Initiatives for Advocacy, Research and Actions — building a fair and democratic Nepal through democracy and governance, human rights, just energy transition, disaster and climate resilient communities, and reducing inequalities." as const
 
 export const ORG_DESCRIPTION =
-  "Aranya Initiatives is a Nepal-based organization working for advocacy, research and accountability across democracy and governance, human rights, just energy transition, disaster and climate resilient communities, and reducing social, economic and digital inequalities." as const
+  "ARANYA Initiatives is a Nepal-based organization working for advocacy, research and actions across democracy and governance, human rights, just energy transition, disaster and climate resilient communities, and reducing social, economic and digital inequalities." as const
 
 export const THEMATIC_AREAS = [
   {

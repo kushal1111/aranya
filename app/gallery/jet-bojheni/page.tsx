@@ -14,7 +14,7 @@ import bojheniPhoto3 from "@/app/images/WhatsApp Image 2026-03-14 at 2.21.35 PM 
 import bojheniPhoto4 from "@/app/images/WhatsApp Image 2026-03-14 at 2.21.35 PM (2).jpeg"
 
 const description =
-  "Photos from the Aranya Initiatives Just Energy Transition advocacy workshop in Bojheni, Nepal."
+  "Photos from the ARANYA Initiatives Just Energy Transition advocacy workshop in Bojheni, Nepal."
 
 export const metadata = createPageMetadata({
   title: "JET Workshop Photos",

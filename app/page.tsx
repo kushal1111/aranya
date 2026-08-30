@@ -131,7 +131,7 @@ export default function HomePage() {
             <div className="w-12 h-1 bg-[#2F80A8] mb-6 rounded-full" />
             <p className="text-lg text-gray-600 max-w-2xl">
               Explore {ORG_SHORT} projects, publications, and events that support advocacy, research, and
-              accountability across communities.
+              actions across communities.
             </p>
           </div>
 

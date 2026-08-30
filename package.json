@@ -8,7 +8,9 @@
     "lint": "next lint",
     "start": "next start",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "indexnow": "node scripts/indexnow.mjs",
+    "deploy:indexnow": "pnpm deploy && pnpm indexnow"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.20.1",

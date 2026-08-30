@@ -9,7 +9,7 @@ import { ORG_NAME, ORG_SHORT, SITE_EMAIL } from "@/lib/site"
 import { ArrowLeft, Users } from "lucide-react"
 
 const description =
-  "Team profiles for Aranya Initiatives will be published here when staff names and biographies are confirmed."
+  "Team profiles for ARANYA Initiatives will be published here when staff names and biographies are confirmed."
 
 export const metadata = createPageMetadata({
   title: "Meet Our Team",
