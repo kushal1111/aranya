@@ -8,7 +8,7 @@ import { ORG_NAME, ORG_SHORT } from "@/lib/site"
 import { ArrowRight, FolderOpen, BookOpen, CalendarDays } from "lucide-react"
 
 const description =
-  "Explore ARANYA Initiatives projects, publications and events supporting advocacy, research, actions and community work."
+  "Explore ARANYA Initiatives projects, publications and events supporting advocacy, research, action and community work."
 
 export const metadata = createPageMetadata({
   title: "Our Activities",

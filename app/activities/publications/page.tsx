@@ -45,7 +45,7 @@ export default function PublicationsPage() {
           <div className="w-12 h-1 bg-[#D8A84E] mb-6 rounded-full" />
           <p className="text-lg text-white/75 max-w-3xl">
             {ORG_SHORT} publications share research insights, project learnings, and practical guides to support
-            advocacy and actions across communities and partner organizations.
+            advocacy and action across communities and partner organizations.
           </p>
           <div className="mt-8">
             <Link href="/activities">

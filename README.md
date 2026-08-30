@@ -1,6 +1,6 @@
 # ARANYA Initiatives
 
-Website for **ARANYA Initiatives** — *ARANYA Initiatives for Advocacy, Research and Actions* — a Nepal-based organization working for a just, inclusive and democratic Nepal.
+Website for **ARANYA Initiatives** — *ARANYA Initiatives for Advocacy, Research and Action* — a Nepal-based organization working for a just, inclusive and democratic Nepal.
 
 **Vision:** We envision a just, inclusive and democratic Nepal where institutions are accountable to its people.
 

@@ -3,9 +3,9 @@ export const SITE_URL = "https://aranyainitiatives.org" as const
 export const ORG_NAME = "ARANYA Initiatives" as const
 export const ORG_SHORT = "ARANYA" as const
 export const ORG_EXPANDED =
-  "ARANYA Initiatives for Advocacy, Research and Actions" as const
+  "ARANYA Initiatives for Advocacy, Research and Action" as const
 export const ORG_TAGLINE = ORG_EXPANDED
-export const ORG_TAGLINE_SUFFIX = "for Advocacy, Research and Actions" as const
+export const ORG_TAGLINE_SUFFIX = "for Advocacy, Research and Action" as const
 
 export const ORG_VISION =
   "We envision a just, inclusive and democratic Nepal where institutions are accountable to its people." as const
@@ -31,13 +31,13 @@ export const ORGANIZATION_ID = `${SITE_URL}/#organization` as const
 export const WEBSITE_ID = `${SITE_URL}/#website` as const
 
 export const HOME_TITLE =
-  "ARANYA Initiatives | Advocacy, Research and Actions" as const
+  "ARANYA Initiatives | Advocacy, Research and Action" as const
 
 export const HOME_DESCRIPTION =
-  "ARANYA Initiatives for Advocacy, Research and Actions — building a fair and democratic Nepal through democracy and governance, human rights, just energy transition, disaster and climate resilient communities, and reducing inequalities." as const
+  "ARANYA Initiatives for Advocacy, Research and Action — building a fair and democratic Nepal through democracy and governance, human rights, just energy transition, disaster and climate resilient communities, and reducing inequalities." as const
 
 export const ORG_DESCRIPTION =
-  "ARANYA Initiatives is a Nepal-based organization working for advocacy, research and actions across democracy and governance, human rights, just energy transition, disaster and climate resilient communities, and reducing social, economic and digital inequalities." as const
+  "ARANYA Initiatives is a Nepal-based organization working for advocacy, research and action across democracy and governance, human rights, just energy transition, disaster and climate resilient communities, and reducing social, economic and digital inequalities." as const
 
 export const THEMATIC_AREAS = [
   {

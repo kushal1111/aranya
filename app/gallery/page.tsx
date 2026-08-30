@@ -109,7 +109,7 @@ export default function GalleryPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Join Our Next Project</h2>
           <p className="text-lg mb-8 max-w-3xl mx-auto text-white/75">
-            Be part of {ORG_SHORT}&apos;s work on advocacy, research, and actions.
+            Be part of {ORG_SHORT}&apos;s work on advocacy, research, and action.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/volunteer">

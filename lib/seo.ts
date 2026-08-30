@@ -42,11 +42,20 @@ export function createPageMetadata({
       siteName: ORG_NAME,
       locale: "en",
       type: "website",
+      images: [
+        {
+          url: absoluteUrl("/icon.png"),
+          width: 512,
+          height: 512,
+          alt: ORG_NAME,
+        },
+      ],
     },
     twitter: {
       card: "summary",
       title: displayTitle,
       description,
+      images: [absoluteUrl("/icon.png")],
     },
   }
 }
@@ -63,8 +72,12 @@ export const rootMetadata: Metadata = {
   creator: ORG_NAME,
   publisher: ORG_NAME,
   icons: {
-    icon: "/docs/logo.jpg",
-    apple: "/docs/logo.jpg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-48.png", type: "image/png", sizes: "48x48" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   robots: {
     index: true,
@@ -77,11 +90,20 @@ export const rootMetadata: Metadata = {
     siteName: ORG_NAME,
     locale: "en",
     type: "website",
+    images: [
+      {
+        url: absoluteUrl("/icon.png"),
+        width: 512,
+        height: 512,
+        alt: ORG_NAME,
+      },
+    ],
   },
   twitter: {
     card: "summary",
     title: HOME_TITLE,
     description: HOME_DESCRIPTION,
+    images: [absoluteUrl("/icon.png")],
   },
   verification: {
     other: {

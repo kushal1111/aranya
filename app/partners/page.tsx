@@ -16,7 +16,7 @@ import partner6 from "@/app/images/partners/WhatsApp Image 2026-03-14 at 7.49.47
 import partner7 from "@/app/images/partners/WhatsApp Image 2026-03-14 at 7.49.47 PM (2).jpeg"
 
 const description =
-  "Organizations that work with ARANYA Initiatives on advocacy, research, actions, and community-centered work."
+  "Organizations that work with ARANYA Initiatives on advocacy, research, action, and community-centered work."
 
 export const metadata = createPageMetadata({
   title: "Our Partners",
@@ -59,7 +59,7 @@ export default function PartnersPage() {
           <div className="w-12 h-1 bg-[#D8A84E] mb-6 rounded-full" />
           <p className="text-lg text-white/75 max-w-3xl">
             {ORG_SHORT} works with like-minded institutions and grassroots actors to advance advocacy, research, and
-            actions.
+            action.
           </p>
         </div>
       </section>
