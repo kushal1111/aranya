@@ -34,10 +34,10 @@ export const HOME_TITLE =
   "Aranya Initiatives | Advocacy, Research and Accountability" as const
 
 export const HOME_DESCRIPTION =
-  "Aranya Initiatives for Advocacy, Research and Accountability — building a fair and democratic Nepal through democracy and governance, human rights, just energy transition and climate resilience, disaster preparedness, and reducing inequalities." as const
+  "Aranya Initiatives for Advocacy, Research and Accountability — building a fair and democratic Nepal through democracy and governance, human rights, just energy transition, disaster and climate resilient communities, and reducing inequalities." as const
 
 export const ORG_DESCRIPTION =
-  "Aranya Initiatives is a Nepal-based organization working for advocacy, research and accountability across democracy and governance, human rights, just energy transition and climate resilient communities, disaster preparedness, and reducing social, economic and digital inequalities." as const
+  "Aranya Initiatives is a Nepal-based organization working for advocacy, research and accountability across democracy and governance, human rights, just energy transition, disaster and climate resilient communities, and reducing social, economic and digital inequalities." as const
 
 export const THEMATIC_AREAS = [
   {
@@ -57,38 +57,18 @@ export const THEMATIC_AREAS = [
     linkLabel: `See ${ORG_SHORT} activities`,
   },
   {
-    id: "jet-crc",
-    title: "Just Energy Transition and Climate Resilient Communities",
+    id: "jet",
+    title: "Just Energy Transition",
     description:
-      "We advance a fair energy transition and community climate resilience so that women, Indigenous peoples, and marginalized communities shape solutions that protect people and the environment.",
+      "Just Energy Transition (JET) work supports a fair and inclusive shift from fossil fuels to renewable energy systems, ensuring that women, Indigenous peoples, and marginalized communities are meaningfully included in decision-making.",
     href: "/activities/projects/jet-toolkit",
     linkLabel: "Read about the JET advocacy workshop",
-    focusAreas: [
-      {
-        abbr: "CNN",
-        title: "Carbon Net Negative",
-        description:
-          "Carbon Net Negative (CNN) work develops and promotes strategies that move beyond carbon neutrality towards emission removal through scientific and technological intervention that are community-driven and rooted in nature.",
-      },
-      {
-        abbr: "JET",
-        title: "Just Energy Transition",
-        description:
-          "Just Energy Transition (JET) work supports a fair and inclusive shift from fossil fuels to renewable energy systems, ensuring that women, Indigenous peoples, and marginalized communities are meaningfully included in decision-making.",
-      },
-      {
-        abbr: "CRC",
-        title: "Climate Resilient Communities",
-        description:
-          "Climate Resilient Communities (CRC) work strengthens local capacities to tackle cross-cutting impacts of climate change by promoting resilience-building measures, knowledge sharing, and nature-based solutions.",
-      },
-    ],
   },
   {
-    id: "disaster",
-    title: "Disaster Preparedness and Response",
+    id: "crc",
+    title: "Disaster and Climate Resilient Communities",
     description:
-      "We support communities to prepare for, respond to, and recover from disasters with approaches that prioritize local knowledge, inclusion, and lasting resilience.",
+      "Climate Resilient Communities (CRC) work strengthens local capacities to tackle cross-cutting impacts of climate change by promoting resilience-building measures, knowledge sharing, and nature-based solutions.",
     href: "/activities",
     linkLabel: `See ${ORG_SHORT} activities`,
   },

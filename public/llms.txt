@@ -10,11 +10,8 @@ This file is an experimental aid for language models. The official website is th
 
 - Democracy and Governance
 - Human Rights and Advocacy
-- Just Energy Transition and Climate Resilient Communities
-  - Carbon Net Negative (CNN)
-  - Just Energy Transition (JET)
-  - Climate Resilient Communities (CRC)
-- Disaster Preparedness and Response
+- Just Energy Transition (JET)
+- Disaster and Climate Resilient Communities (CRC)
 - Reducing Inequalities: Social, Economic and Digital
 
 ## Public pages
