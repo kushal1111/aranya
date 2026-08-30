@@ -8,6 +8,11 @@ import { Dialog, DialogContent, DialogTitle, DialogHeader, DialogFooter } from "
 
 const documents = [
   {
+    title: "Company Registration",
+    file: "/docs/company-registration.pdf",
+    description: "Company registration document",
+  },
+  {
     title: "PAN Registration",
     file: "/docs/pan-registration.pdf",
     description: "PAN registration document",
