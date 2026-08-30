@@ -1,16 +1,32 @@
-"use client"
-
 import Link from "next/link"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import SiteFooter from "@/components/ui/site-footer"
-import SiteHeader from "@/components/ui/site-header"
+import { Breadcrumbs } from "@/components/breadcrumbs"
+import { PageJsonLd } from "@/components/page-json-ld"
+import SiteShell from "@/components/site-shell"
+import { createPageMetadata } from "@/lib/seo"
+import { ORG_NAME } from "@/lib/site"
 import { ArrowLeft, MapPin, Calendar } from "lucide-react"
 import bojheniPhoto1 from "@/app/images/WhatsApp Image 2026-03-14 at 2.21.34 PM.jpeg"
 import bojheniPhoto2 from "@/app/images/WhatsApp Image 2026-03-14 at 2.21.35 PM.jpeg"
 import bojheniPhoto3 from "@/app/images/WhatsApp Image 2026-03-14 at 2.21.35 PM (1).jpeg"
 import bojheniPhoto4 from "@/app/images/WhatsApp Image 2026-03-14 at 2.21.35 PM (2).jpeg"
+
+const description =
+  "Photos from the ARANYA Initiatives Just Energy Transition advocacy workshop in Bojheni, Nepal."
+
+export const metadata = createPageMetadata({
+  title: "JET Workshop Photos",
+  description,
+  path: "/gallery/jet-bojheni",
+})
+
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Gallery", path: "/gallery" },
+  { name: "JET Workshop Photos", path: "/gallery/jet-bojheni" },
+]
 
 const workshopPhotos = [
   {
@@ -33,50 +49,59 @@ const workshopPhotos = [
 
 export default function JetBojheniGalleryPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <SiteHeader active="gallery" />
-
+    <SiteShell active="gallery">
+      <PageJsonLd
+        path="/gallery/jet-bojheni"
+        name={`JET Workshop Photos | ${ORG_NAME}`}
+        description={description}
+        breadcrumbs={breadcrumbs}
+      />
       <section className="py-16 sm:py-20 bg-[#0d2b1e] px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
+          <Breadcrumbs items={breadcrumbs} />
           <Link href="/gallery">
             <Button variant="outline" className="mb-6 border-white/30 text-white hover:bg-white/10 bg-transparent">
-              <ArrowLeft className="mr-2 h-4 w-4" />
+              <ArrowLeft className="mr-2 h-4 w-4" aria-hidden="true" />
               Back to Gallery
             </Button>
           </Link>
 
           <Badge className="mb-4 bg-emerald-100 text-emerald-800">Just Energy Transition</Badge>
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>
-            Just Energy Transition Advocacy Workshop
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            JET Workshop Photos: Bojheni
           </h1>
           <div className="w-12 h-1 bg-amber-500 mb-6 rounded-full" />
 
           <div className="flex flex-wrap items-center gap-4 text-sm text-white/70 mb-6">
             <span className="inline-flex items-center">
-              <MapPin className="h-4 w-4 mr-1" />
+              <MapPin className="h-4 w-4 mr-1" aria-hidden="true" />
               Bojheni, Nepal
             </span>
             <span className="inline-flex items-center">
-              <Calendar className="h-4 w-4 mr-1" />
+              <Calendar className="h-4 w-4 mr-1" aria-hidden="true" />
               2026
             </span>
           </div>
 
           <p className="text-lg text-white/75 max-w-4xl leading-relaxed">
-            This workshop is part of ARANYA&apos;s Just Energy Transition (JET) program. It helps communities
-            understand rights frameworks, map socio-economic and land concerns, and engage decision-making processes
-            so renewable energy development remains equitable, transparent, and accountable.
+            These photographs document ARANYA&apos;s Just Energy Transition (JET) advocacy workshop. The workshop helps
+            communities understand rights frameworks, map socio-economic and land concerns, and engage decision-making
+            processes so renewable energy development remains equitable, transparent, and accountable.{" "}
+            <Link href="/activities/projects/jet-toolkit" className="text-amber-400 hover:text-amber-300 font-semibold">
+              Read the project overview
+            </Link>
+            .
           </p>
         </div>
       </section>
 
       <section className="py-16 sm:py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {workshopPhotos.map((photo, idx) => (
-            <figure key={idx} className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+          {workshopPhotos.map((photo) => (
+            <figure key={photo.caption} className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
               <Image
                 src={photo.src}
-                alt={`JET Bojheni workshop photo ${idx + 1}`}
+                alt={photo.caption}
                 width={1200}
                 height={900}
                 className="w-full h-72 object-cover"
@@ -86,7 +111,6 @@ export default function JetBojheniGalleryPage() {
           ))}
         </div>
       </section>
-      <SiteFooter />
-    </div>
+    </SiteShell>
   )
 }

@@ -1,0 +1,34 @@
+# ARANYA Initiatives
+
+Official website: https://aranyainitiatives.org/
+
+ARANYA Initiatives (ARANYA — Action for Resilient Adaptation and Nature-based Energy Alternatives) is a Nepal-based non-governmental, not-for-profit organization advancing equitable climate solutions through carbon-negative strategies, just energy transitions, and nature-based community resilience.
+
+This file is an experimental aid for language models. The official website is the authoritative source. Prefer crawlable HTML pages, the XML sitemap, and on-page content over this file.
+
+## Core thematic areas
+
+- Carbon Net Negative (CNN)
+- Just Energy Transition (JET)
+- Climate Resilient Communities (CRC)
+
+## Public pages
+
+- Home: https://aranyainitiatives.org/
+- Activities: https://aranyainitiatives.org/activities
+- Climate projects: https://aranyainitiatives.org/activities/projects
+- Just Energy Transition Advocacy Workshop: https://aranyainitiatives.org/activities/projects/jet-toolkit
+- Publications: https://aranyainitiatives.org/activities/publications
+- Just Energy Transition Toolkit: https://aranyainitiatives.org/activities/publications/just-energy-transition-toolkit
+- Advocacy Paper: Feminist Just Energy Transition: https://aranyainitiatives.org/activities/publications/feminist-just-energy-transition
+- Gallery: https://aranyainitiatives.org/gallery
+- JET workshop photos, Bojheni: https://aranyainitiatives.org/gallery/jet-bojheni
+- Partners: https://aranyainitiatives.org/partners
+- Volunteer: https://aranyainitiatives.org/volunteer
+- Contact: https://aranyainitiatives.org/contact
+
+## Contact
+
+- Email: aranyainitiatives@gmail.com
+- Address: Suryabinayak-5, Bhaktapur, Nepal
+- Contact page: https://aranyainitiatives.org/contact

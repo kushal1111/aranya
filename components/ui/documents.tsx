@@ -4,19 +4,14 @@ import React, { useEffect, useState } from "react"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Download, Eye } from "lucide-react"
-import { Dialog, DialogContent, DialogTitle, DialogHeader, DialogFooter, DialogTrigger } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogTitle, DialogHeader, DialogFooter } from "@/components/ui/dialog"
 
 const documents = [
-  {
-    title: "Company Registration",
-    file: "/docs/company-registration.pdf",
-    description: "Company Registration Certificate and Incorporation document",
-  },
   {
     title: "PAN Registration",
     file: "/docs/pan-registration.pdf",
     description: "PAN registration document",
-  }
+  },
 ]
 
 function formatBytes(bytes: number | null) {
@@ -42,8 +37,7 @@ export default function Documents() {
         const res = await fetch(doc.file, { method: "HEAD" })
         const len = res.headers.get("content-length")
         setSizes((s) => ({ ...s, [doc.file]: len ? parseInt(len, 10) : null }))
-      } catch (e) {
-        // fallback: leave unknown
+      } catch {
         setSizes((s) => ({ ...s, [doc.file]: null }))
       }
     })
@@ -53,23 +47,44 @@ export default function Documents() {
     <div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {documents.map((doc, idx) => (
-          <Card key={doc.file} role="article" aria-labelledby={`doc-title-${idx}`} aria-describedby={`doc-desc-${idx}`} className="bg-white text-gray-900">
+          <Card
+            key={doc.file}
+            role="article"
+            aria-labelledby={`doc-title-${idx}`}
+            aria-describedby={`doc-desc-${idx}`}
+            className="bg-white text-gray-900"
+          >
             <CardHeader>
-              <CardTitle id={`doc-title-${idx}`} className="text-sm">{doc.title}</CardTitle>
+              <CardTitle id={`doc-title-${idx}`} className="text-sm">
+                {doc.title}
+              </CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col justify-between">
-              <p id={`doc-desc-${idx}`} className="mb-2 text-sm text-gray-600">{doc.description}</p>
+              <p id={`doc-desc-${idx}`} className="mb-2 text-sm text-gray-600">
+                {doc.description}
+              </p>
 
               <div className="flex items-center justify-between mt-4">
                 <div className="text-sm text-gray-500">{formatBytes(sizes[doc.file])}</div>
 
                 <div className="flex items-center space-x-2">
-                  <Button size="sm" variant="ghost" onClick={() => setPreview(doc.file)} aria-label={`Preview ${doc.title}`}>
-                    <Eye className="mr-2 h-4 w-4" /> Preview
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    onClick={() => setPreview(doc.file)}
+                    aria-label={`Preview ${doc.title}`}
+                  >
+                    <Eye className="mr-2 h-4 w-4" aria-hidden="true" /> Preview
                   </Button>
 
-                  <a href={doc.file} target="_blank" rel="noopener noreferrer" aria-label={`Open ${doc.title} (opens in new tab)`} className="inline-flex items-center space-x-2 text-sm text-green-600 hover:underline">
-                    <Download className="h-4 w-4" />
+                  <a
+                    href={doc.file}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Open ${doc.title} (opens in new tab)`}
+                    className="inline-flex items-center space-x-2 text-sm text-green-600 hover:underline"
+                  >
+                    <Download className="h-4 w-4" aria-hidden="true" />
                     <span>Open</span>
                   </a>
                 </div>
@@ -95,7 +110,12 @@ export default function Documents() {
 
           <DialogFooter>
             <div className="flex items-center justify-between w-full">
-              <a href={preview ?? "#"} target="_blank" rel="noreferrer" className="text-sm text-green-600 hover:underline">
+              <a
+                href={preview ?? "#"}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm text-green-600 hover:underline"
+              >
                 Open in new tab
               </a>
               <Button onClick={() => setPreview(null)}>Close</Button>

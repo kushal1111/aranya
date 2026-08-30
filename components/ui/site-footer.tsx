@@ -1,37 +1,31 @@
 import Image from "next/image"
 import Link from "next/link"
 import { FolderOpen, BookOpen, CalendarDays, Mail, MapPin, Users } from "lucide-react"
+import { DONATION_MAILTO, LOGO_PATH, ORG_ADDRESS_LINE, ORG_EXPANDED, ORG_NAME, SITE_EMAIL } from "@/lib/site"
 
 export default function SiteFooter() {
   return (
     <footer id="contact" role="contentinfo" aria-labelledby="footer-heading" className="bg-[#0a1f14] text-white">
-      <h2 id="footer-heading" className="sr-only">Footer</h2>
+      <h2 id="footer-heading" className="sr-only">
+        Site footer
+      </h2>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
-
-          {/* Brand column */}
           <div className="lg:col-span-1 space-y-5">
-            <Link href="/" aria-label="Go to homepage" className="inline-block">
-              <Image
-                src="/docs/logo.jpg"
-                alt="Aaranya logo"
-                width={170}
-                height={57}
-                className="h-11 w-auto"
-              />
+            <Link href="/" aria-label={`${ORG_NAME} home`} className="inline-block">
+              <Image src={LOGO_PATH} alt={`${ORG_NAME} logo`} width={170} height={57} className="h-11 w-auto" />
             </Link>
             <p className="text-white/55 text-sm leading-relaxed">
-              ARANYA is a non-profit dedicated to advancing equitable climate solutions through carbon-negative
-              strategies, inclusive renewable energy transitions, and nature-based community resilience.
+              {ORG_NAME} ({ORG_EXPANDED}) advances equitable climate solutions through carbon-negative strategies,
+              inclusive renewable energy transitions, and nature-based community resilience.
             </p>
           </div>
 
-          {/* Activities */}
           <div>
             <h3
-              className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-5 flex items-center gap-2"
-              style={{ fontFamily: "'Oswald', sans-serif" }}
+              className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-5"
+             
             >
               Activities
             </h3>
@@ -46,7 +40,7 @@ export default function SiteFooter() {
                     href={item.href}
                     className="inline-flex items-center gap-2 text-sm text-white/55 hover:text-white transition-colors duration-150"
                   >
-                    <item.icon className="h-3.5 w-3.5 text-white/30" />
+                    <item.icon className="h-3.5 w-3.5 text-white/30" aria-hidden="true" />
                     {item.label}
                   </Link>
                 </li>
@@ -54,18 +48,17 @@ export default function SiteFooter() {
             </ul>
           </div>
 
-          {/* Contribute */}
           <div>
             <h3
               className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-5"
-              style={{ fontFamily: "'Oswald', sans-serif" }}
+             
             >
               Contribute
             </h3>
             <ul className="space-y-3">
               {[
                 { href: "/volunteer", label: "Volunteer" },
-                { href: "/#donate", label: "Donate" },
+                { href: DONATION_MAILTO, label: "Donation Enquiry" },
                 { href: "/gallery", label: "Gallery" },
                 { href: "/partners", label: "Partners" },
                 { href: "/#get-involved", label: "Documents" },
@@ -82,63 +75,46 @@ export default function SiteFooter() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h3
               className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-5"
-              style={{ fontFamily: "'Oswald', sans-serif" }}
+             
             >
               Contact
             </h3>
             <ul className="space-y-4">
-            <li>
+              <li>
                 <Link
                   href="/our-team"
                   className="inline-flex items-start gap-2.5 text-sm text-white/55 hover:text-white transition-colors duration-150"
                 >
-                  <Users className="h-4 w-4 text-white/30 mt-0.5 shrink-0" />
+                  <Users className="h-4 w-4 text-white/30 mt-0.5 shrink-0" aria-hidden="true" />
                   Our Team
                 </Link>
               </li>
               <li>
                 <a
-                  href="mailto:aranyainitiatives@gmail.com"
+                  href={`mailto:${SITE_EMAIL}`}
                   className="inline-flex items-start gap-2.5 text-sm text-white/55 hover:text-white transition-colors duration-150"
                 >
-                  <Mail className="h-4 w-4 text-white/30 mt-0.5 shrink-0" />
-                  aranyainitiatives@gmail.com
+                  <Mail className="h-4 w-4 text-white/30 mt-0.5 shrink-0" aria-hidden="true" />
+                  {SITE_EMAIL}
                 </a>
               </li>
               <li>
-                <span className="inline-flex items-start gap-2.5 text-sm text-white/55">
-                  <MapPin className="h-4 w-4 text-white/30 mt-0.5 shrink-0" />
-                  Suryabinayak-5, Bhaktapur, Nepal
-                </span>
+                <address className="inline-flex items-start gap-2.5 text-sm text-white/55 not-italic">
+                  <MapPin className="h-4 w-4 text-white/30 mt-0.5 shrink-0" aria-hidden="true" />
+                  {ORG_ADDRESS_LINE}
+                </address>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-white/35">
-            © {new Date().getFullYear()} ARANYA — Action for Resilient Adaptation and Nature-based Energy Alternatives.
-            All rights reserved.
+            © {new Date().getFullYear()} {ORG_NAME} — {ORG_EXPANDED}. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            {[
-              { href: "/#privacy", label: "Privacy Policy" },
-              { href: "/#terms", label: "Terms of Service" },
-            ].map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                className="text-xs text-white/35 hover:text-white/70 transition-colors duration-150"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
         </div>
       </div>
     </footer>

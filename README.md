@@ -1,6 +1,6 @@
-# Aaranya — Climate Action Website
+# ARANYA Initiatives — Climate Action Website
 
-Website for **ARANYA** (Action for Resilient Adaptation and Nature-based Energy Alternatives), a Nepal-based non-profit focused on equitable climate solutions, just energy transition, and nature-based community resilience.
+Website for **ARANYA Initiatives** (ARANYA — Action for Resilient Adaptation and Nature-based Energy Alternatives), a Nepal-based non-profit focused on equitable climate solutions, just energy transition, and nature-based community resilience.
 
 ## Tech stack
 
@@ -22,7 +22,9 @@ Website for **ARANYA** (Action for Resilient Adaptation and Nature-based Energy 
 | `/gallery/jet-bojheni` | JET Bojheni gallery |
 | `/partners` | Partners |
 | `/volunteer` | Volunteer |
-| `/our-team` | Our team |
+| `/contact` | Contact |
+| `/our-team` | Our team (not indexed until profiles are published) |
+| `/activities/publications/[slug]` | Individual publication pages |
 
 Organization PDFs live in `public/docs/` and are served as static files at `/docs/<filename>.pdf`.
 
