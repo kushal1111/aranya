@@ -2,15 +2,20 @@
 
 Official website: https://aranyainitiatives.org/
 
-ARANYA Initiatives (ARANYA — Action for Resilient Adaptation and Nature-based Energy Alternatives) is a Nepal-based non-governmental, not-for-profit organization advancing equitable climate solutions through carbon-negative strategies, just energy transitions, and nature-based community resilience.
+ARANYA Initiatives (Aranya Initiatives for Advocacy, Research and Accountability) is a Nepal-based organization working for a just, inclusive and democratic Nepal through advocacy, research and accountability.
 
 This file is an experimental aid for language models. The official website is the authoritative source. Prefer crawlable HTML pages, the XML sitemap, and on-page content over this file.
 
 ## Core thematic areas
 
-- Carbon Net Negative (CNN)
-- Just Energy Transition (JET)
-- Climate Resilient Communities (CRC)
+- Democracy and Governance
+- Human Rights and Advocacy
+- Just Energy Transition and Climate Resilient Communities
+  - Carbon Net Negative (CNN)
+  - Just Energy Transition (JET)
+  - Climate Resilient Communities (CRC)
+- Disaster Preparedness and Response
+- Reducing Inequalities: Social, Economic and Digital
 
 ## Public pages
 

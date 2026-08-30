@@ -34,29 +34,71 @@ export const HOME_TITLE =
   "Aranya Initiatives | Advocacy, Research and Accountability" as const
 
 export const HOME_DESCRIPTION =
-  "Aranya Initiatives for Advocacy, Research and Accountability — building a fair and democratic Nepal through justice, equality, dignity, and accountable institutions." as const
+  "Aranya Initiatives for Advocacy, Research and Accountability — building a fair and democratic Nepal through democracy and governance, human rights, just energy transition and climate resilience, disaster preparedness, and reducing inequalities." as const
 
 export const ORG_DESCRIPTION =
-  "Aranya Initiatives is a Nepal-based organization working for advocacy, research and accountability. We fight for protecting the environment, reducing socio-economic and technological inequalities, and standing up for democracy and human rights." as const
+  "Aranya Initiatives is a Nepal-based organization working for advocacy, research and accountability across democracy and governance, human rights, just energy transition and climate resilient communities, disaster preparedness, and reducing social, economic and digital inequalities." as const
 
 export const THEMATIC_AREAS = [
   {
-    abbr: "CNN",
-    title: "Carbon Net Negative",
+    id: "democracy",
+    title: "Democracy and Governance",
     description:
-      "Carbon Net Negative (CNN) work develops and promotes strategies that move beyond carbon neutrality towards emission removal through scientific and technological intervention that are community-driven and rooted in nature.",
+      "We work to strengthen democratic institutions, civic participation, and accountable governance so that public systems remain responsive to people across Nepal.",
+    href: "/activities",
+    linkLabel: `See ${ORG_SHORT} activities`,
   },
   {
-    abbr: "JET",
-    title: "Just Energy Transition",
+    id: "human-rights",
+    title: "Human Rights and Advocacy",
     description:
-      "Just Energy Transition (JET) work supports a fair and inclusive shift from fossil fuels to renewable energy systems, ensuring that women, Indigenous peoples, and marginalized communities are meaningfully included in decision-making.",
+      "We stand up for human rights through research, advocacy, and accountability, supporting communities to claim dignity, justice, and equal protection under the law.",
+    href: "/activities",
+    linkLabel: `See ${ORG_SHORT} activities`,
   },
   {
-    abbr: "CRC",
-    title: "Climate Resilient Communities",
+    id: "jet-crc",
+    title: "Just Energy Transition and Climate Resilient Communities",
     description:
-      "Climate Resilient Communities (CRC) work strengthens local capacities to tackle cross-cutting impacts of climate change by promoting resilience-building measures, knowledge sharing, and nature-based solutions.",
+      "We advance a fair energy transition and community climate resilience so that women, Indigenous peoples, and marginalized communities shape solutions that protect people and the environment.",
+    href: "/activities/projects/jet-toolkit",
+    linkLabel: "Read about the JET advocacy workshop",
+    focusAreas: [
+      {
+        abbr: "CNN",
+        title: "Carbon Net Negative",
+        description:
+          "Carbon Net Negative (CNN) work develops and promotes strategies that move beyond carbon neutrality towards emission removal through scientific and technological intervention that are community-driven and rooted in nature.",
+      },
+      {
+        abbr: "JET",
+        title: "Just Energy Transition",
+        description:
+          "Just Energy Transition (JET) work supports a fair and inclusive shift from fossil fuels to renewable energy systems, ensuring that women, Indigenous peoples, and marginalized communities are meaningfully included in decision-making.",
+      },
+      {
+        abbr: "CRC",
+        title: "Climate Resilient Communities",
+        description:
+          "Climate Resilient Communities (CRC) work strengthens local capacities to tackle cross-cutting impacts of climate change by promoting resilience-building measures, knowledge sharing, and nature-based solutions.",
+      },
+    ],
+  },
+  {
+    id: "disaster",
+    title: "Disaster Preparedness and Response",
+    description:
+      "We support communities to prepare for, respond to, and recover from disasters with approaches that prioritize local knowledge, inclusion, and lasting resilience.",
+    href: "/activities",
+    linkLabel: `See ${ORG_SHORT} activities`,
+  },
+  {
+    id: "inequalities",
+    title: "Reducing Inequalities: Social, Economic and Digital",
+    description:
+      "We work to reduce socio-economic and technological inequalities so that justice, equality, and dignity are accessible to everyone, including those excluded by digital divides.",
+    href: "/activities",
+    linkLabel: `See ${ORG_SHORT} activities`,
   },
 ] as const
 

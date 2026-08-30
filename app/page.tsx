@@ -14,7 +14,7 @@ import {
   ORG_VISION,
   THEMATIC_AREAS,
 } from "@/lib/site"
-import { FolderOpen, BookOpen, CalendarDays, ArrowRight, Globe, Users, Lightbulb } from "lucide-react"
+import { FolderOpen, BookOpen, CalendarDays, ArrowRight, Scale, HeartHandshake, Leaf, ShieldAlert, Equal } from "lucide-react"
 
 export const metadata = createPageMetadata({
   title: HOME_TITLE,
@@ -24,15 +24,19 @@ export const metadata = createPageMetadata({
 })
 
 const thematicIcons = {
-  CNN: Globe,
-  JET: Users,
-  CRC: Lightbulb,
+  democracy: Scale,
+  "human-rights": HeartHandshake,
+  "jet-crc": Leaf,
+  disaster: ShieldAlert,
+  inequalities: Equal,
 } as const
 
 const thematicStyles = {
-  CNN: { color: "text-[#0B3D35]", bg: "bg-[#F1F6F7]", border: "border-l-[#0B3D35]" },
-  JET: { color: "text-[#2F80A8]", bg: "bg-[#E8F4F8]", border: "border-l-[#2F80A8]" },
-  CRC: { color: "text-[#b8892e]", bg: "bg-[#f8f1e3]", border: "border-l-[#D8A84E]" },
+  democracy: { color: "text-[#0B3D35]", bg: "bg-[#F1F6F7]", border: "border-l-[#0B3D35]" },
+  "human-rights": { color: "text-[#123B5D]", bg: "bg-[#eef3f7]", border: "border-l-[#123B5D]" },
+  "jet-crc": { color: "text-[#2F80A8]", bg: "bg-[#E8F4F8]", border: "border-l-[#2F80A8]" },
+  disaster: { color: "text-[#b8892e]", bg: "bg-[#f8f1e3]", border: "border-l-[#D8A84E]" },
+  inequalities: { color: "text-[#0B3D35]", bg: "bg-[#F1F6F7]", border: "border-l-[#A7D46F]" },
 } as const
 
 export default function HomePage() {
@@ -70,37 +74,45 @@ export default function HomePage() {
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#0B3D35] mb-6">
             Our Thematic Areas
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {THEMATIC_AREAS.map((area) => {
-              const Icon = thematicIcons[area.abbr]
-              const styles = thematicStyles[area.abbr]
-              const href =
-                area.abbr === "JET"
-                  ? "/activities/projects/jet-toolkit"
-                  : area.abbr === "CNN"
-                    ? "/activities/publications"
-                    : "/activities"
+              const Icon = thematicIcons[area.id]
+              const styles = thematicStyles[area.id]
+              const focusAreas = "focusAreas" in area ? area.focusAreas : undefined
 
               return (
                 <article
-                  key={area.abbr}
-                  className={`border-l-4 ${styles.border} ${styles.bg} p-6 rounded-r-lg hover:shadow-md transition-shadow duration-200`}
+                  key={area.id}
+                  className={`border-l-4 ${styles.border} ${styles.bg} p-6 rounded-r-lg hover:shadow-md transition-shadow duration-200 ${
+                    focusAreas ? "md:col-span-2" : ""
+                  }`}
                 >
                   <Icon className={`h-8 w-8 ${styles.color} mb-4`} aria-hidden="true" />
-                  <div className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">
-                    {area.abbr}
-                  </div>
                   <h3 className="text-xl font-bold text-[#0B3D35] mb-3">{area.title}</h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">{area.description}</p>
+
+                  {focusAreas ? (
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+                      {focusAreas.map((focus) => (
+                        <div
+                          key={focus.abbr}
+                          className="rounded-lg bg-white/70 border border-white/80 p-4"
+                        >
+                          <div className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">
+                            {focus.abbr}
+                          </div>
+                          <h4 className="text-base font-bold text-[#0B3D35] mb-2">{focus.title}</h4>
+                          <p className="text-sm text-gray-600 leading-relaxed">{focus.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
+
                   <Link
-                    href={href}
+                    href={area.href}
                     className="text-sm font-semibold text-[#0B3D35] hover:text-[#164f45]"
                   >
-                    {area.abbr === "JET"
-                      ? "Read about the JET advocacy workshop"
-                      : area.abbr === "CNN"
-                        ? `Browse ${ORG_SHORT} publications`
-                        : `See ${ORG_SHORT} activities`}
+                    {area.linkLabel}
                   </Link>
                 </article>
               )

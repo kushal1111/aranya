@@ -42,7 +42,12 @@ export function organizationJsonLd(): JsonLd {
       "@type": "Country",
       name: ORG_ADDRESS.addressCountryName,
     },
-    knowsAbout: THEMATIC_AREAS.map((area) => `${area.abbr}: ${area.title}`),
+    knowsAbout: THEMATIC_AREAS.flatMap((area) => [
+      area.title,
+      ...("focusAreas" in area
+        ? area.focusAreas.map((focus) => `${focus.abbr}: ${focus.title}`)
+        : []),
+    ]),
   }
 }
 

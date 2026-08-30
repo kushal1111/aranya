@@ -64,7 +64,7 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-8 mt-14 pt-10 border-t border-white/10">
             {[
-              { value: "3", label: "Core Thematic Areas" },
+              { value: "5", label: "Core Thematic Areas" },
               { value: "100+", label: "People Reached" },
               { value: "2", label: "Publications" },
             ].map((stat) => (
