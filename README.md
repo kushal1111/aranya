@@ -1,6 +1,10 @@
-# ARANYA Initiatives — Climate Action Website
+# Aranya Initiatives
 
-Website for **ARANYA Initiatives** (ARANYA — Action for Resilient Adaptation and Nature-based Energy Alternatives), a Nepal-based non-profit focused on equitable climate solutions, just energy transition, and nature-based community resilience.
+Website for **Aranya Initiatives** — *Aranya Initiatives for Advocacy, Research and Accountability* — a Nepal-based organization working for a just, inclusive and democratic Nepal.
+
+**Vision:** We envision a just, inclusive and democratic Nepal where institutions are accountable to its people.
+
+**Mission:** Our mission is to build a fair and democratic Nepal where justice, equality and dignity are for everyone. Our organization fights for protecting the environment, reducing socio-economic and technological inequalities, and standing up for democracy and human rights.
 
 ## Tech stack
 

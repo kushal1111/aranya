@@ -5,14 +5,14 @@ import { Breadcrumbs } from "@/components/breadcrumbs"
 import { PageJsonLd } from "@/components/page-json-ld"
 import SiteShell from "@/components/site-shell"
 import { createPageMetadata } from "@/lib/seo"
-import { ORG_NAME } from "@/lib/site"
+import { ORG_NAME, ORG_SHORT } from "@/lib/site"
 import { ArrowLeft, ArrowRight, FolderOpen } from "lucide-react"
 
 const description =
-  "Review ARANYA Initiatives climate projects, including the Just Energy Transition advocacy workshop in Bojheni, Nepal."
+  "Review Aranya Initiatives projects, including the Just Energy Transition advocacy workshop in Bojheni, Nepal."
 
 export const metadata = createPageMetadata({
-  title: "Climate Projects",
+  title: "Projects",
   description,
   path: "/activities/projects",
 })
@@ -37,35 +37,30 @@ export default function ProjectsPage() {
     <SiteShell active="activities">
       <PageJsonLd
         path="/activities/projects"
-        name={`Climate Projects | ${ORG_NAME}`}
+        name={`Projects | ${ORG_NAME}`}
         description={description}
         type="CollectionPage"
         breadcrumbs={breadcrumbs}
       />
-      <section className="py-16 sm:py-20 bg-[#0d2b1e]">
+      <section className="py-16 sm:py-20 bg-[#0B3D35]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbs} />
-          <p
-            className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-3"
-           
-          >
-            Activities
-          </p>
-          <h1
-            className="text-4xl md:text-5xl font-bold text-white mb-4 inline-flex items-center gap-3"
-           
-          >
-            <FolderOpen className="h-9 w-9 text-amber-400" aria-hidden="true" />
+          <p className="text-xs font-bold uppercase tracking-widest text-[#D8A84E] mb-3">Activities</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 inline-flex items-center gap-3">
+            <FolderOpen className="h-9 w-9 text-[#D8A84E]" aria-hidden="true" />
             Projects
           </h1>
-          <div className="w-12 h-1 bg-amber-500 mb-6 rounded-full" />
+          <div className="w-12 h-1 bg-[#D8A84E] mb-6 rounded-full" />
           <p className="text-lg text-white/75 max-w-3xl">
-            Explore ARANYA&apos;s project work. Open a project to view details, implementation approach, and focus
+            Explore {ORG_SHORT}&apos;s project work. Open a project to view details, implementation approach, and focus
             areas.
           </p>
           <div className="mt-8 flex gap-3">
             <Link href="/activities">
-              <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 bg-transparent">
+              <Button
+                variant="outline"
+                className="border-white/30 text-white hover:bg-white/10 bg-transparent"
+              >
                 <ArrowLeft className="mr-2 h-4 w-4" aria-hidden="true" />
                 Back to Activities
               </Button>
@@ -74,19 +69,16 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 bg-gray-50">
+      <section className="py-16 sm:py-20 bg-[#F1F6F7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-6 md:grid-cols-2">
           {projects.map((project) => (
             <Card key={project.href} className="border border-gray-200">
               <CardContent className="p-6">
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">
-                  {project.title}
-                </h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">{project.title}</h2>
                 <p className="text-sm text-gray-600 leading-relaxed mb-5">{project.description}</p>
                 <Link
                   href={project.href}
-                  className="inline-flex items-center text-sm font-semibold text-emerald-700 hover:text-emerald-900"
-                 
+                  className="inline-flex items-center text-sm font-semibold text-[#0B3D35] hover:text-[#164f45]"
                 >
                   Open project details
                   <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />

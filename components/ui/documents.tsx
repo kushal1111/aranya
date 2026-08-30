@@ -82,7 +82,7 @@ export default function Documents() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Open ${doc.title} (opens in new tab)`}
-                    className="inline-flex items-center space-x-2 text-sm text-green-600 hover:underline"
+                    className="inline-flex items-center space-x-2 text-sm text-[#0B3D35] hover:underline"
                   >
                     <Download className="h-4 w-4" aria-hidden="true" />
                     <span>Open</span>
@@ -114,7 +114,7 @@ export default function Documents() {
                 href={preview ?? "#"}
                 target="_blank"
                 rel="noreferrer"
-                className="text-sm text-green-600 hover:underline"
+                className="text-sm text-[#0B3D35] hover:underline"
               >
                 Open in new tab
               </a>

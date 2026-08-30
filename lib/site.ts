@@ -1,9 +1,17 @@
 export const SITE_URL = "https://aranyainitiatives.org" as const
 
-export const ORG_NAME = "ARANYA Initiatives" as const
-export const ORG_SHORT = "ARANYA" as const
+export const ORG_NAME = "Aranya Initiatives" as const
+export const ORG_SHORT = "Aranya" as const
 export const ORG_EXPANDED =
-  "Action for Resilient Adaptation and Nature-based Energy Alternatives" as const
+  "Aranya Initiatives for Advocacy, Research and Accountability" as const
+export const ORG_TAGLINE = ORG_EXPANDED
+export const ORG_TAGLINE_SUFFIX = "for Advocacy, Research and Accountability" as const
+
+export const ORG_VISION =
+  "We envision a just, inclusive and democratic Nepal where institutions are accountable to its people." as const
+
+export const ORG_MISSION =
+  "Our mission is to build a fair and democratic Nepal where justice, equality and dignity are for everyone. Our organization fights for protecting the environment, reducing socio-economic and technological inequalities, and standing up for democracy and human rights." as const
 
 export const SITE_EMAIL = "aranyainitiatives@gmail.com" as const
 
@@ -22,13 +30,14 @@ export const LOGO_URL = `${SITE_URL}${LOGO_PATH}` as const
 export const ORGANIZATION_ID = `${SITE_URL}/#organization` as const
 export const WEBSITE_ID = `${SITE_URL}/#website` as const
 
-export const HOME_TITLE = "ARANYA Initiatives | Climate-Resilient Communities" as const
+export const HOME_TITLE =
+  "Aranya Initiatives | Advocacy, Research and Accountability" as const
 
 export const HOME_DESCRIPTION =
-  "ARANYA Initiatives advances equitable climate solutions through carbon-negative strategies, just energy transitions and community resilience." as const
+  "Aranya Initiatives for Advocacy, Research and Accountability — building a fair and democratic Nepal through justice, equality, dignity, and accountable institutions." as const
 
 export const ORG_DESCRIPTION =
-  "ARANYA Initiatives is a Nepal-based non-governmental, not-for-profit organization advancing equitable climate solutions through carbon-negative strategies, just energy transitions, and nature-based community resilience." as const
+  "Aranya Initiatives is a Nepal-based organization working for advocacy, research and accountability. We fight for protecting the environment, reducing socio-economic and technological inequalities, and standing up for democracy and human rights." as const
 
 export const THEMATIC_AREAS = [
   {

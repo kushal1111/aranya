@@ -1,11 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
 import { FolderOpen, BookOpen, CalendarDays, Mail, MapPin, Users } from "lucide-react"
-import { DONATION_MAILTO, LOGO_PATH, ORG_ADDRESS_LINE, ORG_EXPANDED, ORG_NAME, SITE_EMAIL } from "@/lib/site"
+import { DONATION_MAILTO, LOGO_PATH, ORG_ADDRESS_LINE, ORG_NAME, ORG_TAGLINE_SUFFIX, SITE_EMAIL } from "@/lib/site"
 
 export default function SiteFooter() {
   return (
-    <footer id="contact" role="contentinfo" aria-labelledby="footer-heading" className="bg-[#0a1f14] text-white">
+    <footer id="contact" role="contentinfo" aria-labelledby="footer-heading" className="bg-[#123B5D] text-white">
       <h2 id="footer-heading" className="sr-only">
         Site footer
       </h2>
@@ -17,18 +17,13 @@ export default function SiteFooter() {
               <Image src={LOGO_PATH} alt={`${ORG_NAME} logo`} width={170} height={57} className="h-11 w-auto" />
             </Link>
             <p className="text-white/55 text-sm leading-relaxed">
-              {ORG_NAME} ({ORG_EXPANDED}) advances equitable climate solutions through carbon-negative strategies,
-              inclusive renewable energy transitions, and nature-based community resilience.
+              {ORG_NAME} — <span className="italic">{ORG_TAGLINE_SUFFIX}</span>. We work for a just, inclusive and
+              democratic Nepal where institutions are accountable to its people.
             </p>
           </div>
 
           <div>
-            <h3
-              className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-5"
-             
-            >
-              Activities
-            </h3>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-[#D8A84E] mb-5">Activities</h3>
             <ul className="space-y-3">
               {[
                 { href: "/activities/projects", icon: FolderOpen, label: "Projects" },
@@ -49,12 +44,7 @@ export default function SiteFooter() {
           </div>
 
           <div>
-            <h3
-              className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-5"
-             
-            >
-              Contribute
-            </h3>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-[#D8A84E] mb-5">Contribute</h3>
             <ul className="space-y-3">
               {[
                 { href: "/volunteer", label: "Volunteer" },
@@ -76,12 +66,7 @@ export default function SiteFooter() {
           </div>
 
           <div>
-            <h3
-              className="text-xs font-bold uppercase tracking-widest text-amber-400 mb-5"
-             
-            >
-              Contact
-            </h3>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-[#D8A84E] mb-5">Contact</h3>
             <ul className="space-y-4">
               <li>
                 <Link
@@ -113,7 +98,8 @@ export default function SiteFooter() {
 
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-white/35">
-            © {new Date().getFullYear()} {ORG_NAME} — {ORG_EXPANDED}. All rights reserved.
+            © {new Date().getFullYear()} {ORG_NAME} — <span className="italic">{ORG_TAGLINE_SUFFIX}</span>. All rights
+            reserved.
           </p>
         </div>
       </div>

@@ -49,7 +49,7 @@ export default function SiteHeader({ active }: SiteHeaderProps) {
                   key={item.label}
                   href={item.href}
                   className={`font-heading px-4 py-2 text-sm font-semibold uppercase tracking-wide transition-colors duration-150 ${
-                    isActive ? "text-emerald-700" : "text-gray-600 hover:text-emerald-700"
+                    isActive ? "text-[#0B3D35]" : "text-gray-600 hover:text-[#0B3D35]"
                   }`}
                   style={{ letterSpacing: "0.07em" }}
                 >
@@ -62,12 +62,12 @@ export default function SiteHeader({ active }: SiteHeaderProps) {
           <div className="flex items-center gap-3">
             <Link
               href={DONATION_MAILTO}
-              className="font-heading hidden md:inline-flex bg-amber-500 hover:bg-amber-400 text-gray-900 font-semibold rounded-sm px-5 py-2 text-sm uppercase tracking-wide"
+              className="font-heading hidden md:inline-flex bg-[#A7D46F] hover:bg-[#96c45f] text-[#0B3D35] font-semibold rounded-sm px-5 py-2 text-sm uppercase tracking-wide"
             >
               Donation Enquiry
             </Link>
             <button
-              className="md:hidden p-2 rounded text-gray-600 hover:text-emerald-700"
+              className="md:hidden p-2 rounded text-gray-600 hover:text-[#0B3D35]"
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-nav-menu"
@@ -91,7 +91,7 @@ export default function SiteHeader({ active }: SiteHeaderProps) {
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="font-heading px-2 py-2 text-sm font-semibold uppercase tracking-wide text-gray-700 hover:text-emerald-700"
+                className="font-heading px-2 py-2 text-sm font-semibold uppercase tracking-wide text-gray-700 hover:text-[#0B3D35]"
                 style={{ letterSpacing: "0.07em" }}
               >
                 {item.label}
@@ -100,7 +100,7 @@ export default function SiteHeader({ active }: SiteHeaderProps) {
             <Link
               href={DONATION_MAILTO}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="font-heading mt-2 inline-flex items-center justify-center w-full bg-amber-500 hover:bg-amber-400 text-gray-900 font-semibold rounded-sm px-5 py-2 text-sm uppercase tracking-wide"
+              className="font-heading mt-2 inline-flex items-center justify-center w-full bg-[#A7D46F] hover:bg-[#96c45f] text-[#0B3D35] font-semibold rounded-sm px-5 py-2 text-sm uppercase tracking-wide"
             >
               Donation Enquiry
             </Link>

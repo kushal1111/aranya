@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs"
 import { PageJsonLd } from "@/components/page-json-ld"
 import SiteShell from "@/components/site-shell"
 import { createPageMetadata } from "@/lib/seo"
-import { ORG_NAME } from "@/lib/site"
+import { ORG_NAME, ORG_SHORT } from "@/lib/site"
 import { ArrowLeft, MapPin, Calendar } from "lucide-react"
 import bojheniPhoto1 from "@/app/images/WhatsApp Image 2026-03-14 at 2.21.34 PM.jpeg"
 import bojheniPhoto2 from "@/app/images/WhatsApp Image 2026-03-14 at 2.21.35 PM.jpeg"
@@ -14,7 +14,7 @@ import bojheniPhoto3 from "@/app/images/WhatsApp Image 2026-03-14 at 2.21.35 PM 
 import bojheniPhoto4 from "@/app/images/WhatsApp Image 2026-03-14 at 2.21.35 PM (2).jpeg"
 
 const description =
-  "Photos from the ARANYA Initiatives Just Energy Transition advocacy workshop in Bojheni, Nepal."
+  "Photos from the Aranya Initiatives Just Energy Transition advocacy workshop in Bojheni, Nepal."
 
 export const metadata = createPageMetadata({
   title: "JET Workshop Photos",
@@ -56,21 +56,22 @@ export default function JetBojheniGalleryPage() {
         description={description}
         breadcrumbs={breadcrumbs}
       />
-      <section className="py-16 sm:py-20 bg-[#0d2b1e] px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 bg-[#0B3D35] px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <Breadcrumbs items={breadcrumbs} />
           <Link href="/gallery">
-            <Button variant="outline" className="mb-6 border-white/30 text-white hover:bg-white/10 bg-transparent">
+            <Button
+              variant="outline"
+              className="mb-6 border-white/30 text-white hover:bg-white/10 bg-transparent"
+            >
               <ArrowLeft className="mr-2 h-4 w-4" aria-hidden="true" />
               Back to Gallery
             </Button>
           </Link>
 
-          <Badge className="mb-4 bg-emerald-100 text-emerald-800">Just Energy Transition</Badge>
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            JET Workshop Photos: Bojheni
-          </h1>
-          <div className="w-12 h-1 bg-amber-500 mb-6 rounded-full" />
+          <Badge className="mb-4 bg-[#eef6e4] text-[#0B3D35]">Just Energy Transition</Badge>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">JET Workshop Photos: Bojheni</h1>
+          <div className="w-12 h-1 bg-[#D8A84E] mb-6 rounded-full" />
 
           <div className="flex flex-wrap items-center gap-4 text-sm text-white/70 mb-6">
             <span className="inline-flex items-center">
@@ -84,10 +85,13 @@ export default function JetBojheniGalleryPage() {
           </div>
 
           <p className="text-lg text-white/75 max-w-4xl leading-relaxed">
-            These photographs document ARANYA&apos;s Just Energy Transition (JET) advocacy workshop. The workshop helps
-            communities understand rights frameworks, map socio-economic and land concerns, and engage decision-making
-            processes so renewable energy development remains equitable, transparent, and accountable.{" "}
-            <Link href="/activities/projects/jet-toolkit" className="text-amber-400 hover:text-amber-300 font-semibold">
+            These photographs document {ORG_SHORT}&apos;s Just Energy Transition (JET) advocacy workshop. The workshop
+            helps communities understand rights frameworks, map socio-economic and land concerns, and engage
+            decision-making processes so renewable energy development remains equitable, transparent, and accountable.{" "}
+            <Link
+              href="/activities/projects/jet-toolkit"
+              className="text-[#D8A84E] hover:text-[#e8c56a] font-semibold"
+            >
               Read the project overview
             </Link>
             .
@@ -95,7 +99,7 @@ export default function JetBojheniGalleryPage() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 bg-[#F1F6F7] px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
           {workshopPhotos.map((photo) => (
             <figure key={photo.caption} className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
