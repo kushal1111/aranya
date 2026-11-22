@@ -26,6 +26,15 @@ export const publications: Publication[] = [
     pdfPath: "/docs/Feminist%20Just%20Energy%20Transition%20in%20Nepal_Paper.pdf",
     path: "/activities/publications/feminist-just-energy-transition",
   },
+  {
+    slug: "green-jobs-skills-development-toolkit",
+    title: "Green Jobs and Skills Development Toolkit",
+    seoTitle: "Green Jobs and Skills Toolkit",
+    description:
+      "Nepali-language guide to green skills, jobs and enterprise in Nepal across 11 sectors, from agriculture and forestry to renewable energy, waste management, green construction and electric vehicles.",
+    pdfPath: "/docs/Green%20Jobs%20and%20Skills%20Development%20Toolkit.pdf",
+    path: "/activities/publications/green-jobs-skills-development-toolkit",
+  },
 ]
 
 export function getPublication(slug: string): Publication | undefined {

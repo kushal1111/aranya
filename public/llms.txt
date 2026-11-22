@@ -26,6 +26,7 @@ This file is an experimental aid for language models. The official website is th
 - Publications: https://aranyainitiatives.org/activities/publications
 - Just Energy Transition Toolkit: https://aranyainitiatives.org/activities/publications/just-energy-transition-toolkit
 - Advocacy Paper: Feminist Just Energy Transition: https://aranyainitiatives.org/activities/publications/feminist-just-energy-transition
+- Green Jobs and Skills Development Toolkit: https://aranyainitiatives.org/activities/publications/green-jobs-skills-development-toolkit
 - Gallery: https://aranyainitiatives.org/gallery
 - JET workshop photos, Bojheni: https://aranyainitiatives.org/gallery/jet-bojheni
 - Coffee farming photos, Chyamrungbesi: https://aranyainitiatives.org/gallery/coffee-farming-chyamrungbesi
