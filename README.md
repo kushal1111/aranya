@@ -20,10 +20,13 @@ Website for **ARANYA Initiatives** — *ARANYA Initiatives for Advocacy, Researc
 | `/activities` | Activities hub |
 | `/activities/projects` | Projects |
 | `/activities/projects/jet-toolkit` | JET toolkit project |
+| `/activities/projects/coffee-farming-chyamrungbesi` | Coffee farming and biodiversity conservation, Chyamrungbesi |
 | `/activities/publications` | Publications |
 | `/activities/events` | Events |
+| `/activities/events/youth-climate-justice-roundtable` | Global Youth Climate Justice Roundtable, COP31 |
 | `/gallery` | Gallery |
 | `/gallery/jet-bojheni` | JET Bojheni gallery |
+| `/gallery/coffee-farming-chyamrungbesi` | Coffee farming gallery, Chyamrungbesi |
 | `/partners` | Partners |
 | `/volunteer` | Volunteer |
 | `/contact` | Contact |

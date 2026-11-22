@@ -20,11 +20,15 @@ This file is an experimental aid for language models. The official website is th
 - Activities: https://aranyainitiatives.org/activities
 - Climate projects: https://aranyainitiatives.org/activities/projects
 - Just Energy Transition Advocacy Workshop: https://aranyainitiatives.org/activities/projects/jet-toolkit
+- Coffee farming for biodiversity conservation, Chyamrungbesi: https://aranyainitiatives.org/activities/projects/coffee-farming-chyamrungbesi
+- Events: https://aranyainitiatives.org/activities/events
+- Global Youth Climate Justice Roundtable, COP31: https://aranyainitiatives.org/activities/events/youth-climate-justice-roundtable
 - Publications: https://aranyainitiatives.org/activities/publications
 - Just Energy Transition Toolkit: https://aranyainitiatives.org/activities/publications/just-energy-transition-toolkit
 - Advocacy Paper: Feminist Just Energy Transition: https://aranyainitiatives.org/activities/publications/feminist-just-energy-transition
 - Gallery: https://aranyainitiatives.org/gallery
 - JET workshop photos, Bojheni: https://aranyainitiatives.org/gallery/jet-bojheni
+- Coffee farming photos, Chyamrungbesi: https://aranyainitiatives.org/gallery/coffee-farming-chyamrungbesi
 - Partners: https://aranyainitiatives.org/partners
 - Volunteer: https://aranyainitiatives.org/volunteer
 - Contact: https://aranyainitiatives.org/contact
