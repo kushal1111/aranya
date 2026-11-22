@@ -14,7 +14,7 @@ import {
   ORG_VISION,
   THEMATIC_AREAS,
 } from "@/lib/site"
-import { FolderOpen, BookOpen, CalendarDays, ArrowRight, Scale, HeartHandshake, Leaf, Lightbulb, Equal } from "lucide-react"
+import { FolderOpen, BookOpen, CalendarDays, ArrowRight, Scale, HeartHandshake, Leaf, Lightbulb, HandHeart } from "lucide-react"
 
 export const metadata = createPageMetadata({
   title: HOME_TITLE,
@@ -28,7 +28,7 @@ const thematicIcons = {
   "human-rights": HeartHandshake,
   jet: Leaf,
   crc: Lightbulb,
-  inequalities: Equal,
+  philanthropy: HandHeart,
 } as const
 
 const thematicStyles = {
@@ -36,7 +36,7 @@ const thematicStyles = {
   "human-rights": { color: "text-[#123B5D]", bg: "bg-[#eef3f7]", border: "border-l-[#123B5D]" },
   jet: { color: "text-[#2F80A8]", bg: "bg-[#E8F4F8]", border: "border-l-[#2F80A8]" },
   crc: { color: "text-[#b8892e]", bg: "bg-[#f8f1e3]", border: "border-l-[#D8A84E]" },
-  inequalities: { color: "text-[#0B3D35]", bg: "bg-[#F1F6F7]", border: "border-l-[#A7D46F]" },
+  philanthropy: { color: "text-[#0B3D35]", bg: "bg-[#F1F6F7]", border: "border-l-[#A7D46F]" },
 } as const
 
 export default function HomePage() {
