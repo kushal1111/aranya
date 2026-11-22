@@ -96,6 +96,7 @@ export const INDEXABLE_PATHS = [
   "/activities/publications",
   "/activities/publications/just-energy-transition-toolkit",
   "/activities/publications/feminist-just-energy-transition",
+  "/activities/publications/green-jobs-skills-development-toolkit",
   "/gallery",
   "/gallery/jet-bojheni",
   "/gallery/coffee-farming-chyamrungbesi",

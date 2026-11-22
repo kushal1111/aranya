@@ -10,7 +10,7 @@ import { ORG_NAME, ORG_SHORT } from "@/lib/site"
 import { ArrowLeft, BookOpen } from "lucide-react"
 
 const description =
-  "Read ARANYA Initiatives publications on just energy transition, including the JET Toolkit and a feminist advocacy paper."
+  "Read ARANYA Initiatives publications on just energy transition and green jobs, including the JET Toolkit, a feminist advocacy paper, and a green jobs and skills guide."
 
 export const metadata = createPageMetadata({
   title: "Publications",
