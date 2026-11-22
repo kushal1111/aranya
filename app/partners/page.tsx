@@ -14,6 +14,9 @@ import partner4 from "@/app/images/partners/WhatsApp Image 2026-03-14 at 7.49.46
 import partner5 from "@/app/images/partners/WhatsApp Image 2026-03-14 at 7.49.47 PM.jpeg"
 import partner6 from "@/app/images/partners/WhatsApp Image 2026-03-14 at 7.49.47 PM (1).jpeg"
 import partner7 from "@/app/images/partners/WhatsApp Image 2026-03-14 at 7.49.47 PM (2).jpeg"
+import oxfam from "@/app/images/partners/oxfam.jpg"
+import bethanchowk from "@/app/images/partners/bethanchowk-rural-municipality.jpg"
+import changeTheGame from "@/app/images/partners/change-the-game-academy.jpg"
 
 const description =
   "Organizations that work with ARANYA Initiatives on advocacy, research, action, and community-centered work."
@@ -37,6 +40,9 @@ const partners = [
   { name: "Harin Nepal", image: partner5 },
   { name: "Nepal Center for Integrated Development", image: partner6 },
   { name: "Bighnaharta Nepal", image: partner7 },
+  { name: "Oxfam", image: oxfam },
+  { name: "Bethanchowk Rural Municipality, Kavrepalanchok", image: bethanchowk },
+  { name: "Change the Game Academy", image: changeTheGame },
 ]
 
 export default function PartnersPage() {

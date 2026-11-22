@@ -25,7 +25,8 @@ const activities = [
   {
     title: "Projects",
     href: "/activities/projects",
-    description: "On-ground initiatives, including just energy transition advocacy with communities.",
+    description:
+      "On-ground initiatives, including just energy transition advocacy and sustainable coffee farming.",
     icon: FolderOpen,
     color: "text-[#0B3D35]",
   },
@@ -39,7 +40,7 @@ const activities = [
   {
     title: "Events",
     href: "/activities/events",
-    description: "Workshops, forums, and field activities. Listings appear here when confirmed.",
+    description: "Roundtables, workshops, and field activities, including the COP31 youth climate justice roundtable.",
     icon: CalendarDays,
     color: "text-sky-600",
   },

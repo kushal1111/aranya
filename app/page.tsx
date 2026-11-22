@@ -143,7 +143,7 @@ export default function HomePage() {
                 iconColor: "text-[#0B3D35]",
                 iconBg: "bg-[#e4efe9]",
                 label: "Projects",
-                desc: "On-ground initiatives, including just energy transition advocacy with communities.",
+                desc: "On-ground initiatives, including just energy transition advocacy and sustainable coffee farming.",
               },
               {
                 href: "/activities/publications",
@@ -159,7 +159,7 @@ export default function HomePage() {
                 iconColor: "text-[#2F80A8]",
                 iconBg: "bg-[#E8F4F8]",
                 label: "Events",
-                desc: "Workshops, forums, and field events. Upcoming listings are added when confirmed.",
+                desc: "Roundtables, workshops, and field events, including the COP31 youth climate justice roundtable.",
               },
             ].map((item) => (
               <Link key={item.label} href={item.href} className="group block">

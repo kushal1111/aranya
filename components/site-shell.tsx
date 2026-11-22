@@ -1,5 +1,4 @@
 import type { ReactNode } from "react"
-import DisasterReliefNotice from "@/components/disaster-relief-notice"
 import SiteFooter from "@/components/ui/site-footer"
 import SiteHeader from "@/components/ui/site-header"
 
@@ -19,8 +18,6 @@ export default function SiteShell({ children, active }: SiteShellProps) {
       </header>
       <main id="main">{children}</main>
       <SiteFooter />
-      {/* Temporary PMDRF flood-relief notice — remove with the component + QR asset when no longer needed */}
-      <DisasterReliefNotice />
     </div>
   )
 }

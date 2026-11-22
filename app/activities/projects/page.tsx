@@ -9,7 +9,7 @@ import { ORG_NAME, ORG_SHORT } from "@/lib/site"
 import { ArrowLeft, ArrowRight, FolderOpen } from "lucide-react"
 
 const description =
-  "Review ARANYA Initiatives projects, including the Just Energy Transition advocacy workshop in Bojheni, Nepal."
+  "Review ARANYA Initiatives projects, including just energy transition advocacy and coffee farming for biodiversity conservation in Kavrepalanchok."
 
 export const metadata = createPageMetadata({
   title: "Projects",
@@ -30,6 +30,12 @@ export default function ProjectsPage() {
       description:
         "A rights-based project that helps local and Indigenous communities navigate renewable energy expansion with accessible legal and policy tools.",
       href: "/activities/projects/jet-toolkit",
+    },
+    {
+      title: "Promoting Biodiversity Conservation through Sustainable Agriculture: Coffee Farming",
+      description:
+        "A two-day coffee cultivation training with about 60 farmers in Chyamrungbesi, Bethanchowk, linking sustainable land use with rural livelihoods.",
+      href: "/activities/projects/coffee-farming-chyamrungbesi",
     },
   ]
 
