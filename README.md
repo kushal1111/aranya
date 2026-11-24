@@ -4,7 +4,7 @@ Website for **ARANYA Initiatives** — *ARANYA Initiatives for Advocacy, Researc
 
 **Vision:** We envision a just, inclusive and democratic Nepal where institutions are accountable to its people.
 
-**Mission:** Our mission is to build a fair and democratic Nepal where justice, equality and dignity are for everyone. Our organization fights for protecting the environment, standing up for democracy and human rights, and mobilising philanthropy and partnerships for the communities that need them most.
+**Mission:** Our mission is to build a fair and democratic Nepal where justice, equality and dignity are for everyone. Our organization fights for protecting the environment, standing up for democracy and human rights, and advancing social justice and reducing inequalities for the communities that need them most.
 
 ## Tech stack
 

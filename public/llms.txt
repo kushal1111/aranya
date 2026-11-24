@@ -2,7 +2,7 @@
 
 Official website: https://aranyainitiatives.org/
 
-ARANYA Initiatives (ARANYA Initiatives for Advocacy, Research and Action) is a Nepal-based organization working for a just, inclusive and democratic Nepal through advocacy, research and action. Its work covers democracy and governance, human rights, just energy transition, disaster and climate resilient communities, and philanthropy. Recent work includes coffee farming for biodiversity conservation in Chyamrungbesi, Kavrepalanchok, and the Global Youth Climate Justice Roundtable at COP31.
+ARANYA Initiatives (ARANYA Initiatives for Advocacy, Research and Action) is a Nepal-based organization working for a just, inclusive and democratic Nepal through advocacy, research and action. Its work covers democracy and governance, human rights, just energy transition, disaster and climate resilient communities, and social justice and reducing inequalities. Recent work includes coffee farming for biodiversity conservation in Chyamrungbesi, Kavrepalanchok, and the Global Youth Climate Justice Roundtable at COP31.
 
 This file is an experimental aid for language models. The official website is the authoritative source. Prefer crawlable HTML pages, the XML sitemap, and on-page content over this file.
 
@@ -12,7 +12,7 @@ This file is an experimental aid for language models. The official website is th
 - Human Rights and Advocacy
 - Just Energy Transition (JET)
 - Disaster and Climate Resilient Communities (CRC)
-- Philanthropy
+- Social Justice and Reducing Inequalities
 
 ## Public pages
 

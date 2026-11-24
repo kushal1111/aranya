@@ -11,7 +11,7 @@ export const ORG_VISION =
   "We envision a just, inclusive and democratic Nepal where institutions are accountable to its people." as const
 
 export const ORG_MISSION =
-  "Our mission is to build a fair and democratic Nepal where justice, equality and dignity are for everyone. Our organization fights for protecting the environment, standing up for democracy and human rights, and mobilising philanthropy and partnerships for the communities that need them most." as const
+  "Our mission is to build a fair and democratic Nepal where justice, equality and dignity are for everyone. Our organization fights for protecting the environment, standing up for democracy and human rights, and advancing social justice and reducing inequalities for the communities that need them most." as const
 
 export const SITE_EMAIL = "aranyainitiatives@gmail.com" as const
 
@@ -34,10 +34,10 @@ export const HOME_TITLE =
   "ARANYA Initiatives | Advocacy, Research and Action" as const
 
 export const HOME_DESCRIPTION =
-  "ARANYA Initiatives for Advocacy, Research and Action — building a fair and democratic Nepal through democracy and governance, human rights, just energy transition, disaster and climate resilient communities, and philanthropy." as const
+  "ARANYA Initiatives for Advocacy, Research and Action — building a fair and democratic Nepal through democracy and governance, human rights, just energy transition, disaster and climate resilient communities, and social justice and reducing inequalities." as const
 
 export const ORG_DESCRIPTION =
-  "ARANYA Initiatives is a Nepal-based organization working for advocacy, research and action across democracy and governance, human rights, just energy transition, disaster and climate resilient communities, and philanthropy and community giving." as const
+  "ARANYA Initiatives is a Nepal-based organization working for advocacy, research and action across democracy and governance, human rights, just energy transition, disaster and climate resilient communities, and social justice and reducing inequalities." as const
 
 export const THEMATIC_AREAS = [
   {
@@ -73,12 +73,12 @@ export const THEMATIC_AREAS = [
     linkLabel: "Read about the climate justice roundtable",
   },
   {
-    id: "philanthropy",
-    title: "Philanthropy",
+    id: "social-justice",
+    title: "Social Justice and Reducing Inequalities",
     description:
-      "We mobilise community giving, partnerships, and local resources toward education, livelihoods, and relief, so that support reaches the people and places that need it most and is used transparently and accountably.",
-    href: "/partners",
-    linkLabel: `See who ${ORG_SHORT} works with`,
+      "We work to advance social justice and reduce inequalities so that people have fair access to rights, resources, and opportunity, with particular attention to communities that have been left behind.",
+    href: "/activities",
+    linkLabel: `See ${ORG_SHORT} activities`,
   },
 ] as const
 
