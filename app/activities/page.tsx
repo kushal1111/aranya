@@ -33,7 +33,8 @@ const activities = [
   {
     title: "Publications",
     href: "/activities/publications",
-    description: "Reports, insights, and practical resources on just energy transition.",
+    description:
+      "Reports and practical resources, including the JET toolkit, a feminist advocacy paper, and a green jobs and skills guide.",
     icon: BookOpen,
     color: "text-[#D8A84E]",
   },

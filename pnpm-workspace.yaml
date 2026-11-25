@@ -1,0 +1,13 @@
+allowBuilds:
+  esbuild: true
+  sharp: true
+  workerd: true
+
+# These versions were published inside pnpm's default 1-day minimumReleaseAge window.
+minimumReleaseAgeExclude:
+  - "@types/node@26.6.10"
+  - caniuse-lite@1.0.30001828
+  - electron-to-chromium@1.5.494
+  - lucide-react@1.80.0
+  - miniflare@5.20261123.1-beta
+  - wrangler@4.168.0

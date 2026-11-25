@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Heart } from "lucide-react"
 import heroBackground from "@/app/images/hero/WhatsApp Image 2026-03-14 at 7.49.50 PM.jpeg"
+import { publications } from "@/lib/publications"
 import { ORG_NAME, ORG_SHORT, ORG_TAGLINE_SUFFIX, ORG_VISION } from "@/lib/site"
 
 export default function Hero() {
@@ -66,7 +67,7 @@ export default function Hero() {
             {[
               { value: "5", label: "Core Thematic Areas" },
               { value: "100+", label: "People Reached" },
-              { value: "2", label: "Publications" },
+              { value: String(publications.length), label: "Publications" },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="font-heading text-3xl sm:text-4xl font-bold text-[#D8A84E]">

@@ -151,7 +151,7 @@ export default function HomePage() {
                 iconColor: "text-[#D8A84E]",
                 iconBg: "bg-[#f8f1e3]",
                 label: "Publications",
-                desc: "Research, reports, and practical resources on just energy transition.",
+                desc: "Research and practical guides: the JET toolkit, a feminist advocacy paper, and a green jobs and skills toolkit.",
               },
               {
                 href: "/activities/events",
